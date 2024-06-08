@@ -10,15 +10,30 @@
   margin-top: 11px;
 }
 
+.searchWrap {
+  display: flex;
+  align-items: normal;
+}
+
 .searchbar {
   width: 350px;
   margin: 0;
   display: inline-block;
   background-color: #f7f7f7;
-  color: #f6f6f6;
   padding: 8px;
   border-radius: 6px;
+  color: #3e5463;
+  border: none;
   height: 40px;
+}
+
+.searchinput {
+  color: #3e5463;
+  font-size: 14px;
+  background: none;
+  width: calc(100%-60px);
+  padding: 0px;
+  line-height: 24px;
 }
 
 /* media screen  */

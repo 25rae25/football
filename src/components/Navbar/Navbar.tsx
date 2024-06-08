@@ -8,11 +8,18 @@ export default function Navbar() {
     <div className={styles.navbarWrapper}>
       <div className={styles.navbar}>
         <div>Logo</div>
-        <div>
+        <div className={styles.searchWrap}>
           <div>
-            <div className={styles.searchbar}>SearchBar</div>
-            <div>이미지</div>
+            <label id="search"></label>
+            <input
+              type="search"
+              id="search"
+              placeholder="지역, 구장, 팀 이름으로 찾기"
+              maxLength={100}
+              className={styles.searchbar}
+            />
           </div>
+          <div>이미지</div>
         </div>
       </div>
     </div>
