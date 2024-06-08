@@ -1,0 +1,24 @@
+.navbarWrapper {
+  max-width: 1024px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 11px;
+}
+
+.searchbar {
+  width: 350px;
+  margin: 0;
+  display: inline-block;
+  background-color: #f7f7f7;
+  color: #f6f6f6;
+  padding: 8px;
+  border-radius: 6px;
+  height: 40px;
+}
+
+/* media screen  */

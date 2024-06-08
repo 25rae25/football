@@ -1,3 +1,8 @@
-export default function Home() {
-  return <div>123</div>;
+export default function HomePage() {
+  return (
+    <>
+      <div></div>
+      <div></div>
+    </>
+  );
 }
