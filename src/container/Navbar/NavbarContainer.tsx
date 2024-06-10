@@ -35,7 +35,7 @@ const SearchWrap = styled.div`
   padding: 8px;
   border: none;
   border-radius: 6px;
-  height: 40px;
+  height: 30px;
   color: #3e5463;
 
   .search {
@@ -49,12 +49,12 @@ const SearchWrap = styled.div`
 const Searchbar = styled.input`
   width: calc(100% - 30px);
   font-size: 14px;
-  line-height: 24px;
   padding: 8px;
   margin-left: 5px;
   border-radius: 6px;
   color: #3e5463;
   border: none;
+  background-color: transparent;
   vertical-align: super;
 `;
 
