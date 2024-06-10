@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
+import NavbarContainer from "@/components/Navbar/NavbarContainer";
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={sans.className}>
         <div>
-          <Navbar />
+          <NavbarContainer />
         </div>
         <main>{children}</main>
       </body>
