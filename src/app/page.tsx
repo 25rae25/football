@@ -1,7 +1,9 @@
+import CarouselContainer from "@/components/Carousel/CarouselContainer";
+
 export default function HomePage() {
   return (
     <>
-      <div></div>
+      <CarouselContainer />
       <div></div>
     </>
   );
