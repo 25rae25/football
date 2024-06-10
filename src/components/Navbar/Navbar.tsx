@@ -1,14 +1,13 @@
 "use client";
 
-import styles from "./Navbar.module.css";
-import Link from "next/link";
+import styled from "@emotion/styled";
 
 export default function Navbar() {
   return (
-    <div className={styles.navbarWrapper}>
-      <div className={styles.navbar}>
+    <div>
+      <div>
         <div>Logo</div>
-        <div className={styles.searchWrap}>
+        <div>
           <div>
             <label id="search"></label>
             <input
@@ -16,7 +15,6 @@ export default function Navbar() {
               id="search"
               placeholder="지역, 구장, 팀 이름으로 찾기"
               maxLength={100}
-              className={styles.searchbar}
             />
           </div>
           <div>이미지</div>
