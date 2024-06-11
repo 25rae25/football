@@ -7,8 +7,19 @@ const MainWrapper = styled.div`
   margin: 0 auto;
 `;
 
+const MainWrap = styled.div`
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+`;
+
 const MainTime = styled.div`
   width: 10%;
+  font-weight: 700;
+  font-size: 15px;
   text-align: center;
 `;
 
@@ -31,6 +42,16 @@ const MainOptions = styled.span`
 
 const MainStatusWrap = styled.div`
   width: 10%;
+`;
+
+const StatusStart = styled.div`
+  color: #fff;
+  background-color: #1570ff;
+  width: 100%;
+  text-align: center;
+  padding: 8px 5px;
+  border-radius: 6px;
+  font-size: 12px;
 `;
 
 const StatusYet = styled.div`
@@ -59,17 +80,51 @@ export default function MainContainer() {
       <ul>
         <li>
           {/* Link로 감싸야하는 곳 */}
-          <div>16:00</div>
-          <MainInfo>
-            <h3>서울 영등포 SKY풋살파크 A구장</h3>
-            <MainMatch>
-              <MainOptions>6vs6</MainOptions>
-              <MainOptions>3파전</MainOptions>
-            </MainMatch>
-          </MainInfo>
-          <MainStatusWrap>
-            <StatusYet>마감임박!</StatusYet>
-          </MainStatusWrap>
+          <MainWrap>
+            <MainTime>16:00</MainTime>
+            <MainInfo>
+              <div>서울 영등포 SKY풋살파크 A구장</div>
+              <MainMatch>
+                <MainOptions>6vs6</MainOptions>
+                <MainOptions>3파전</MainOptions>
+              </MainMatch>
+            </MainInfo>
+            <MainStatusWrap>
+              <StatusYet>마감임박!</StatusYet>
+            </MainStatusWrap>
+          </MainWrap>
+        </li>
+        <li>
+          {/* Link로 감싸야하는 곳 */}
+          <MainWrap>
+            <MainTime>17:00</MainTime>
+            <MainInfo>
+              <div>서울 송파 천마 풋살파크 2구장</div>
+              <MainMatch>
+                <MainOptions>6vs6</MainOptions>
+                <MainOptions>3파전</MainOptions>
+              </MainMatch>
+            </MainInfo>
+            <MainStatusWrap>
+              <StatusFinish>마감</StatusFinish>
+            </MainStatusWrap>
+          </MainWrap>
+        </li>
+        <li>
+          {/* Link로 감싸야하는 곳 */}
+          <MainWrap>
+            <MainTime>17:00</MainTime>
+            <MainInfo>
+              <div>서울 논현 누리풋볼클럽 실내구장</div>
+              <MainMatch>
+                <MainOptions>4vs4</MainOptions>
+                <MainOptions>3파전</MainOptions>
+              </MainMatch>
+            </MainInfo>
+            <MainStatusWrap>
+              <StatusStart>신청가능</StatusStart>
+            </MainStatusWrap>
+          </MainWrap>
         </li>
       </ul>
     </MainWrapper>
