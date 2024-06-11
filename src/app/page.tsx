@@ -1,12 +1,13 @@
-import CarouselContainer from "@/components/Carousel/CarouselContainer";
-import NavigateContainer from "@/container/Navigate/NavigateContainer";
+import CarouselContainer from "@/container/CarouselContainer/CarouselContainer";
+import MainContainer from "@/container/MainContainer/MainContainer";
+import NavigateContainer from "@/container/NavigateContainer/NavigateContainer";
 
 export default function HomePage() {
   return (
     <>
       <NavigateContainer />
       <CarouselContainer />
-      <div></div>
+      <MainContainer />
     </>
   );
 }

@@ -74,7 +74,7 @@ export default function NavbarContainer() {
               maxLength={100}
             />
           </SearchWrap>
-          <Link href="/">
+          <Link href="/login">
             <CiUser className="user" />
           </Link>
         </SearchWrapper>
