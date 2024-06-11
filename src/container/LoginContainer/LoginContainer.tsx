@@ -38,7 +38,6 @@ const LoginInput = styled.input`
   border-radius: 8px;
   padding: 0px 12px;
   font-size: 16px;
-  box-sizing: border-box;
 `;
 
 const LoginButton = styled.button`
