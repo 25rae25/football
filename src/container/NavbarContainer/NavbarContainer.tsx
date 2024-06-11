@@ -21,7 +21,7 @@ const SearchWrapper = styled.div`
   display: flex;
 
   .user {
-    font-size: 27px;
+    font-size: 38px;
     color: #282b33;
     height: 100%;
     padding: 5px;
