@@ -74,6 +74,10 @@ const StatusFinish = styled.div`
   font-size: 12px;
 `;
 
+// ::before {
+//   background-color: #3534a5, #ff5d5d, #ffc645
+// }
+
 export default function MainContainer() {
   return (
     <MainWrapper>

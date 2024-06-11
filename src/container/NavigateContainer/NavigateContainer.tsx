@@ -56,6 +56,9 @@ export default function NavigateContainer() {
             <Newname>NEW</Newname>
           </NewWrap>
         </NaviItem>
+        <NaviItem>
+          <Link href="/">구장 예약</Link>
+        </NaviItem>
       </NaviWrapper>
     </NaviContainer>
   );
