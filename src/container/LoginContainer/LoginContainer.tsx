@@ -97,7 +97,7 @@ export default function LoginContainer() {
         <LoginButton>로그인</LoginButton>
         <FindForm>
           <Link href="/">아이디/비밀번호 찾기</Link>
-          <Link href="/">회원가입</Link>
+          <Link href="/signup">회원가입</Link>
         </FindForm>
       </LoginForm>
     </LoginWrapper>

@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "@emotion/styled";
 
 const SignWrap = styled.div`
@@ -14,7 +16,8 @@ const LabelWrap = styled.div`
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 20px;
+  margin-top: 15px;
 `;
 
 const LabelTitle = styled.label`
@@ -37,11 +40,14 @@ const ButtonWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
   gap: 10px;
 `;
 
 const Button = styled.button`
   background-color: #1570ff;
+  padding: 0 20px;
+  height: 56px;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -52,11 +58,11 @@ const Button = styled.button`
 
 export default function SignupContainer() {
   return (
-    <div>
-      <form>
-        <div>
-          <label htmlFor="email">이메일</label>
-          <input
+    <SignWrap>
+      <SignForm>
+        <LabelWrap>
+          <LabelTitle htmlFor="email">이메일</LabelTitle>
+          <LabelInput
             type="email"
             id="email"
             name="email"
@@ -64,27 +70,27 @@ export default function SignupContainer() {
             autoFocus
             placeholder="아이디를 입력하세요"
           />
-        </div>
-        <div>
-          <label htmlFor="password">비밀번호</label>
-          <input
+        </LabelWrap>
+        <LabelWrap>
+          <LabelTitle htmlFor="password">비밀번호</LabelTitle>
+          <LabelInput
             type="password"
             id="password"
             name="password"
             required
             placeholder="비밀번호를 입력하세요"
           />
-        </div>
-        <div>
-          <label htmlFor="name">이름</label>
-          <input
+        </LabelWrap>
+        <LabelWrap>
+          <LabelTitle htmlFor="name">이름</LabelTitle>
+          <LabelInput
             type="name"
             id="name"
             name="name"
             required
             placeholder="이름을 입력하세요"
           />
-        </div>
+        </LabelWrap>
         {/* <div>
           <label htmlFor="birth">생년월일</label>
           <div>
@@ -95,10 +101,10 @@ export default function SignupContainer() {
             <select name="" id=""></select>
           </div>
         </div> */}
-        <div>
-          <button>가입하기</button>
-        </div>
-      </form>
-    </div>
+        <ButtonWrap>
+          <Button>가입하기</Button>
+        </ButtonWrap>
+      </SignForm>
+    </SignWrap>
   );
 }
