@@ -7,6 +7,15 @@ const SignWrap = styled.div`
   margin: 0 auto;
 `;
 
+const SignTitle = styled.h1`
+  margin: 45px 0 25px 0;
+  color: #d9e0e6;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+`;
+
 const SignForm = styled.form`
   padding: 20px;
 `;
@@ -59,7 +68,10 @@ const Button = styled.button`
 export default function SignupContainer() {
   return (
     <SignWrap>
-      <div>스포츠가 주는 다양한 감정을 즐기며 살아가도록</div>
+      <SignTitle>
+        스포츠가 주는
+        <br /> 다양한 감정을 즐기며 살아가도록
+      </SignTitle>
       <SignForm>
         <LabelWrap>
           <LabelTitle htmlFor="email">이메일</LabelTitle>
