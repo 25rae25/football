@@ -59,6 +59,7 @@ const Button = styled.button`
 export default function SignupContainer() {
   return (
     <SignWrap>
+      <div>스포츠가 주는 다양한 감정을 즐기며 살아가도록</div>
       <SignForm>
         <LabelWrap>
           <LabelTitle htmlFor="email">이메일</LabelTitle>
