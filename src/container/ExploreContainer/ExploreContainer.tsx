@@ -15,6 +15,11 @@ const ExploreWrap = styled.div`
   text-align: center;
 `;
 
+const ExploreItem = styled.div`
+  padding: 5px;
+  min-width: 60px;
+`;
+
 const ExploreText = styled.span`
   margin-top: 5px;
   font-size: 12px;
@@ -24,26 +29,36 @@ export default function ExploreContainer() {
   return (
     <ExploreWrapper>
       <ExploreWrap>
-        <Link href="/">
-          {/* 이미지 들어갈곳 */}
-          <ExploreText>얼리버드</ExploreText>
-        </Link>
-        <Link href="/">
-          {/* 이미지 들어갈곳 */}
-          <ExploreText>여자매치</ExploreText>
-        </Link>
-        <Link href="/">
-          {/* 이미지 들어갈곳 */}
-          <ExploreText>스타터</ExploreText>
-        </Link>
-        <Link href="/">
-          {/* 이미지 들어갈곳 */}
-          <ExploreText>챌린지</ExploreText>
-        </Link>
-        <Link href="/">
-          {/* 이미지 들어갈곳 */}
-          <ExploreText>시작하기</ExploreText>
-        </Link>
+        <ExploreItem>
+          <Link href="/">
+            {/* 이미지 들어갈곳 */}
+            <ExploreText>얼리버드</ExploreText>
+          </Link>
+        </ExploreItem>
+        <ExploreItem>
+          <Link href="/">
+            {/* 이미지 들어갈곳 */}
+            <ExploreText>여자매치</ExploreText>
+          </Link>
+        </ExploreItem>
+        <ExploreItem>
+          <Link href="/">
+            {/* 이미지 들어갈곳 */}
+            <ExploreText>스타터</ExploreText>
+          </Link>
+        </ExploreItem>
+        <ExploreItem>
+          <Link href="/">
+            {/* 이미지 들어갈곳 */}
+            <ExploreText>챌린지</ExploreText>
+          </Link>
+        </ExploreItem>
+        <ExploreItem>
+          <Link href="/">
+            {/* 이미지 들어갈곳 */}
+            <ExploreText>시작하기</ExploreText>
+          </Link>
+        </ExploreItem>
       </ExploreWrap>
     </ExploreWrapper>
   );
