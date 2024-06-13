@@ -1,30 +1,50 @@
+"use client";
+
+import styled from "@emotion/styled";
 import Link from "next/link";
+
+const ExploreWrapper = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
+`;
+
+const ExploreWrap = styled.div`
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+`;
+
+const ExploreText = styled.span`
+  margin-top: 5px;
+  font-size: 12px;
+`;
 
 export default function ExploreContainer() {
   return (
-    <div>
-      <div>
+    <ExploreWrapper>
+      <ExploreWrap>
         <Link href="/">
           {/* 이미지 들어갈곳 */}
-          <p>얼리버드</p>
+          <ExploreText>얼리버드</ExploreText>
         </Link>
         <Link href="/">
           {/* 이미지 들어갈곳 */}
-          <p>여자매치</p>
+          <ExploreText>여자매치</ExploreText>
         </Link>
         <Link href="/">
           {/* 이미지 들어갈곳 */}
-          <p>스타터</p>
+          <ExploreText>스타터</ExploreText>
         </Link>
         <Link href="/">
           {/* 이미지 들어갈곳 */}
-          <p>챌린지</p>
+          <ExploreText>챌린지</ExploreText>
         </Link>
         <Link href="/">
           {/* 이미지 들어갈곳 */}
-          <p>시작하기</p>
+          <ExploreText>시작하기</ExploreText>
         </Link>
-      </div>
-    </div>
+      </ExploreWrap>
+    </ExploreWrapper>
   );
 }
