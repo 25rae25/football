@@ -2,6 +2,7 @@
 
 import styled from "@emotion/styled";
 import Link from "next/link";
+import Image from "next/image";
 
 const ExploreWrapper = styled.div`
   max-width: 1024px;
@@ -33,24 +34,24 @@ export default function ExploreContainer() {
           <Link href="/">
             {/* 이미지 들어갈곳 */}
             {/* <Image
-              src="https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/explore_heart.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvZXhwbG9yZV9oZWFydC5zdmciLCJpYXQiOjE3MTgzMzI3MDAsImV4cCI6MTc0OTg2ODcwMH0.1dOQ6SX5pLpU0G6hTAiPHX3Ow1UJ6EVTe9tm65nIURk&t=2024-06-14T02%3A38%3A21.071Z"
+              src=""
               width={24}
               height={24}
               alt="메인사진"
             /> */}
-            <ExploreText>얼리버드</ExploreText>
+            <ExploreText>팀소개</ExploreText>
           </Link>
         </ExploreItem>
         <ExploreItem>
           <Link href="/">
             {/* 이미지 들어갈곳 */}
-            <ExploreText>여자매치</ExploreText>
+            <ExploreText>팀구경</ExploreText>
           </Link>
         </ExploreItem>
         <ExploreItem>
           <Link href="/">
             {/* 이미지 들어갈곳 */}
-            <ExploreText>스타터</ExploreText>
+            <ExploreText>팀기록</ExploreText>
           </Link>
         </ExploreItem>
         <ExploreItem>
@@ -60,7 +61,7 @@ export default function ExploreContainer() {
           </Link>
         </ExploreItem>
         <ExploreItem>
-          <Link href="/">
+          <Link href="/start">
             {/* 이미지 들어갈곳 */}
             <ExploreText>시작하기</ExploreText>
           </Link>
