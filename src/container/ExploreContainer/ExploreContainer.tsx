@@ -32,6 +32,12 @@ export default function ExploreContainer() {
         <ExploreItem>
           <Link href="/">
             {/* 이미지 들어갈곳 */}
+            {/* <Image
+              src="https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/explore_heart.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvZXhwbG9yZV9oZWFydC5zdmciLCJpYXQiOjE3MTgzMzI3MDAsImV4cCI6MTc0OTg2ODcwMH0.1dOQ6SX5pLpU0G6hTAiPHX3Ow1UJ6EVTe9tm65nIURk&t=2024-06-14T02%3A38%3A21.071Z"
+              width={24}
+              height={24}
+              alt="메인사진"
+            /> */}
             <ExploreText>얼리버드</ExploreText>
           </Link>
         </ExploreItem>
