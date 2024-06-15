@@ -29,8 +29,6 @@ export default function Carousel() {
     "https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/banner04.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvYmFubmVyMDQucG5nIiwiaWF0IjoxNzE4MDg3NTc2LCJleHAiOjE3NDk2MjM1NzZ9.vprjqiaD6wqLurxCdrlbVRgfUrNRAKZo_OPJglypmcY&t=2024-06-11T06%3A32%3A57.040Z",
   ];
 
-  console.log("banner ", banner);
-
   return (
     <S.CarouselWrapper>
       <S.CarouselWrap>
