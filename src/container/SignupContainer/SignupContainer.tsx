@@ -1,123 +1,106 @@
 "use client";
 
-import styled from "@emotion/styled";
-
-const SignWrap = styled.div`
-  max-width: 760px;
-  margin: 0 auto;
-`;
-
-const SignTitle = styled.h1`
-  margin: 45px 0 25px 0;
-  color: #d9e0e6;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
-`;
-
-const SignForm = styled.form`
-  padding: 20px;
-`;
-
-const LabelWrap = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 15px;
-`;
-
-const LabelTitle = styled.label`
-  color: #4b5a64;
-  font-size: 14px;
-  font-weight: 500;
-`;
-
-const LabelInput = styled.input`
-  border: 1px solid #e6ecf1;
-  background-color: #f8fafb;
-  width: 100%;
-  height: 48px;
-  border-radius: 8px;
-  font-size: 16px;
-  outline: none;
-`;
-
-const ButtonWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  gap: 10px;
-`;
-
-const Button = styled.button`
-  background-color: #1570ff;
-  padding: 0 20px;
-  height: 56px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  font-size: 16px;
-  color: #fff;
-`;
+import Signup from "@/components/Signup/Signup";
+import { ChangeEvent, useCallback, useEffect, useState } from "react";
 
 export default function SignupContainer() {
+  const [inputValue, setInputValue] = useState({
+    email: "",
+    name: "",
+    password: "",
+    passwordConfirm: "",
+  });
+
+  // 에러 메세지
+  const [emailMessage, setEmailMessage] = useState("");
+  const [nameMessage, setNameMessage] = useState("");
+  const [passwordMessage, setPasswordMessage] = useState("");
+  const [passwordConfirmMessage, setPasswordConfirmMessage] = useState("");
+
+  // 유효성 검사
+  const [isEmail, setIsEmail] = useState(false);
+  const [isName, setIsName] = useState(false);
+  const [isPassword, setIsPassword] = useState(false);
+  const [isPasswordConfirm, setIsPasswordConfirm] = useState(false);
+
+  const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setInputValue((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }, []);
+
+  useEffect(() => {
+    // 이메일 우효성 검사하는 로직?
+    const emailRegex =
+      /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    if (inputValue?.email.length === 0) {
+      setEmailMessage("");
+      setIsEmail(false);
+    }
+    if (!emailRegex.test(inputValue?.email) && inputValue?.email.length !== 0) {
+      setEmailMessage("이메일 형식이 틀렸습니다. 다시 확인해 주세요.");
+      setIsEmail(false);
+    } else {
+      setEmailMessage("");
+      setIsEmail(true);
+    }
+  }, [inputValue?.email]);
+
+  useEffect(() => {
+    if (inputValue?.name.length < 2 || inputValue?.name.length >= 5) {
+      setNameMessage("이름 형식이 툴렸습니다. 다시 확인해 주세요.");
+    } else {
+      setNameMessage("");
+      setIsName(true);
+    }
+    if (inputValue?.name.length === 0) {
+      setNameMessage("");
+      setIsName(false);
+    }
+  }, [inputValue?.name]);
+
+  useEffect(() => {
+    const passwordRegex =
+      /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
+
+    if (!passwordRegex.test(inputValue.password)) {
+      setPasswordMessage(
+        "숫자, 영문자, 특수문자 조합으로 8자리 이상 해주세요."
+      );
+      setIsPassword(false);
+    } else {
+      setPasswordMessage("");
+      setIsPassword(true);
+    }
+    if (inputValue?.password.length === 0) {
+      setPasswordMessage("");
+      setIsPassword(false);
+    }
+  }, [inputValue.password]);
+
+  useEffect(() => {
+    if (inputValue.password === inputValue.passwordConfirm) {
+      setPasswordConfirmMessage("");
+      setIsPasswordConfirm(true);
+    } else {
+      setPasswordConfirmMessage("비밀번호를 확인해주세요");
+      setIsPasswordConfirm(false);
+    }
+  }, [inputValue.passwordConfirm]);
+
   return (
-    <SignWrap>
-      <SignTitle>
-        스포츠가 주는
-        <br /> 다양한 감정을 즐기며 살아가도록
-      </SignTitle>
-      <SignForm>
-        <LabelWrap>
-          <LabelTitle htmlFor="email">이메일</LabelTitle>
-          <LabelInput
-            type="email"
-            id="email"
-            name="email"
-            required
-            autoFocus
-            placeholder="아이디를 입력하세요"
-          />
-        </LabelWrap>
-        <LabelWrap>
-          <LabelTitle htmlFor="password">비밀번호</LabelTitle>
-          <LabelInput
-            type="password"
-            id="password"
-            name="password"
-            required
-            placeholder="비밀번호를 입력하세요"
-          />
-        </LabelWrap>
-        <LabelWrap>
-          <LabelTitle htmlFor="name">이름</LabelTitle>
-          <LabelInput
-            type="name"
-            id="name"
-            name="name"
-            required
-            placeholder="이름을 입력하세요"
-          />
-        </LabelWrap>
-        {/* <div>
-          <label htmlFor="birth">생년월일</label>
-          <div>
-            <select name="year" id="year">
-              <option value="1994">1994년</option>
-              <option value="1995">1995년</option>
-            </select>
-            <select name="" id=""></select>
-          </div>
-        </div> */}
-        <ButtonWrap>
-          <Button>가입하기</Button>
-        </ButtonWrap>
-      </SignForm>
-    </SignWrap>
+    <Signup
+      isEmail={isEmail}
+      isName={isName}
+      isPassword={isPassword}
+      isPasswordConfirm={isPasswordConfirm}
+      emailMessage={emailMessage}
+      nameMessage={nameMessage}
+      passwordMessage={passwordMessage}
+      passwordConfirmMessage={passwordConfirmMessage}
+      handleInput={handleInput}
+    />
   );
 }
