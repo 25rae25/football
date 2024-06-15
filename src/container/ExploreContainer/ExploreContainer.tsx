@@ -31,7 +31,7 @@ export default function ExploreContainer() {
     <ExploreWrapper>
       <ExploreWrap>
         <ExploreItem>
-          <Link href="/">
+          <Link href="/introduce">
             {/* 이미지 들어갈곳 */}
             {/* <Image
               src=""
@@ -45,7 +45,7 @@ export default function ExploreContainer() {
         <ExploreItem>
           <Link href="/">
             {/* 이미지 들어갈곳 */}
-            <ExploreText>팀구경</ExploreText>
+            <ExploreText>팀홍보</ExploreText>
           </Link>
         </ExploreItem>
         <ExploreItem>

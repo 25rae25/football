@@ -1,7 +1,7 @@
 import CarouselContainer from "@/container/CarouselContainer/CarouselContainer";
 import NavigateContainer from "@/container/NavigateContainer/NavigateContainer";
-import MainPage from "./(page)/main/page";
 import ExploreContainer from "@/container/ExploreContainer/ExploreContainer";
+import ListContainer from "@/container/MainContainer/MainContainer";
 
 export default function HomePage() {
   return (
@@ -9,7 +9,7 @@ export default function HomePage() {
       <NavigateContainer />
       <ExploreContainer />
       <CarouselContainer />
-      <MainPage />
+      <ListContainer />
     </>
   );
 }
