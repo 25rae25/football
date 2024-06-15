@@ -18,9 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={sans.className}>
-        <div>
-          <NavbarContainer />
-        </div>
+        <NavbarContainer />
         <main>{children}</main>
       </body>
     </html>

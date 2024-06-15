@@ -4,6 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 
 export const NavbarWrapper = styled.div`
+  width: 100%;
   max-width: 1024px;
   padding: 0 20px;
   margin: 0 auto;
@@ -12,6 +13,7 @@ export const NavbarWrapper = styled.div`
 export const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 11px;
 `;
 
@@ -28,13 +30,16 @@ export const UserIcon = styled(CiUser)`
 
 export const SearchWrap = styled.div`
   background-color: #f7f7f7;
-  width: 350px;
+  min-width: 350px;
   margin: 0;
   padding: 8px;
   border: none;
   border-radius: 6px;
   height: 40px;
   color: #3e5463;
+  @media (max-width: 768px) {
+    min-width: initial;
+  }
 `;
 
 export const SearchIcon = styled(CiSearch)`
@@ -54,6 +59,12 @@ export const Searchbar = styled.input`
   border: none;
   background-color: transparent;
   vertical-align: super;
+  &::placeholder {
+    transition: all 0.3s ease-in-out;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
 `;
 
 export const Nav = styled(Link)``;

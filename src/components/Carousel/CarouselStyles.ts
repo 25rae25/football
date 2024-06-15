@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 import { IoAdd } from "react-icons/io5";
 
 export const CarouselWrapper = styled.div`
@@ -38,4 +39,9 @@ export const Box = styled.div`
 export const Icon = styled(IoAdd)`
   color: #fff;
   margin-left: 10px;
+`;
+
+export const CarouselImage = styled(Image)`
+  width: 100%;
+  height: 100%;
 `;

@@ -16,10 +16,11 @@ export default function Carousel() {
     },
     dots: false,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
   };
 
   const banner = [
@@ -33,7 +34,7 @@ export default function Carousel() {
       <S.CarouselWrap>
         <Slider {...settings}>
           {banner.map((item, i) => (
-            <Image
+            <S.CarouselImage
               key={item}
               src={item}
               width={1024}

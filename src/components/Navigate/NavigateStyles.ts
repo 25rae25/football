@@ -2,6 +2,7 @@ import Link from "next/link";
 import styled from "@emotion/styled";
 
 export const NaviContainer = styled.div`
+  width: 100%;
   max-width: 1024px;
   margin: 0 auto;
   padding: 14px 24px;
