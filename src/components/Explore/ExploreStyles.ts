@@ -24,4 +24,7 @@ export const ExploreText = styled.span`
   font-size: 12px;
 `;
 
-export const Nav = styled(Link)``;
+export const Nav = styled(Link)`
+  text-decoration: none;
+  color: #000;
+`;

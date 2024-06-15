@@ -67,4 +67,8 @@ export const Searchbar = styled.input`
   }
 `;
 
-export const Nav = styled(Link)``;
+export const Nav = styled(Link)`
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+`;
