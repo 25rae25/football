@@ -1,7 +1,14 @@
 "use client";
 
 import Signup from "@/components/Signup/Signup";
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
+import * as apis from "@/apis";
 
 export default function SignupContainer() {
   const [inputValue, setInputValue] = useState({
@@ -90,6 +97,18 @@ export default function SignupContainer() {
     }
   }, [inputValue.passwordConfirm]);
 
+  const handleSubmit = useCallback(
+    async (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      try {
+        await apis.postSignup(inputValue);
+      } catch (error) {
+        console.error("가입을 실패했습니다.");
+      }
+    },
+    [inputValue]
+  );
+
   return (
     <Signup
       isEmail={isEmail}
@@ -101,6 +120,7 @@ export default function SignupContainer() {
       passwordMessage={passwordMessage}
       passwordConfirmMessage={passwordConfirmMessage}
       handleInput={handleInput}
+      handleSubmit={handleSubmit}
     />
   );
 }

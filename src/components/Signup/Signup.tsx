@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent } from "react";
+import { ChangeEvent, FormEvent } from "react";
 import Input from "../Input/Input";
 import * as S from "./SignupStyles";
 
@@ -14,6 +14,7 @@ type Props = {
   passwordMessage: string;
   passwordConfirmMessage: string;
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
 };
 
 export default function Signup({
@@ -26,6 +27,7 @@ export default function Signup({
   passwordMessage,
   passwordConfirmMessage,
   handleInput,
+  handleSubmit,
 }: Props) {
   return (
     <S.SignWrap>
@@ -33,7 +35,7 @@ export default function Signup({
         스포츠가 주는
         <br /> 다양한 감정을 즐기며 살아가도록
       </S.SignTitle>
-      <S.SignForm onSubmit={() => console.log("눌림?")}>
+      <S.SignForm onSubmit={handleSubmit}>
         <Input
           title="이메일"
           type="email"
