@@ -34,6 +34,7 @@ export const LoginInput = styled.input`
   width: 100%;
   height: 48px;
   border-radius: 8px;
+  text-indent: 10px;
   padding: 0px 12px;
   font-size: 16px;
   box-sizing: border-box;
@@ -57,17 +58,18 @@ export const FindForm = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+  gap: 20px;
 `;
 
-// const FindLink = styled.a`
-//   font-size: 14px;
-//   font-weight: 500;
-//   color: #727f88;
-//   text-align: center;
-//   text-decoration: none;
+export const Nav = styled(Link)`
+  font-size: 14px;
+  font-weight: 500;
+  color: #727f88;
+  text-align: center;
+  text-decoration: none;
 
-//   &:hover {
-//     color: #000;
-//     font-weight: bold;
-//   }
-// `;
+  &:hover {
+    color: #000;
+    font-weight: bold;
+  }
+`;

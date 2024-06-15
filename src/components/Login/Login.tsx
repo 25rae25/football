@@ -2,7 +2,7 @@
 
 import * as S from "./LoginStyles";
 
-export default function LoginContainer() {
+export default function Login() {
   return (
     <S.LoginWrapper>
       <S.LoginForm>
@@ -24,8 +24,8 @@ export default function LoginContainer() {
         </S.LoginWrap>
         <S.LoginButton>로그인</S.LoginButton>
         <S.FindForm>
-          {/* <Link href="/">아이디/비밀번호 찾기</Link>
-          <Link href="/signup">회원가입</Link> */}
+          <S.Nav href="/">아이디/비밀번호 찾기</S.Nav>
+          <S.Nav href="/signup">회원가입</S.Nav>
         </S.FindForm>
       </S.LoginForm>
     </S.LoginWrapper>
