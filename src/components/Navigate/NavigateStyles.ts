@@ -35,4 +35,8 @@ export const Newname = styled.span`
   line-height: 16px;
 `;
 
-export const Nav = styled(Link)``;
+export const Nav = styled(Link)`
+  text-decoration: none;
+  color: #727f88;
+  font-size: 18px;
+`;
