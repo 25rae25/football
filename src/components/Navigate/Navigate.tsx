@@ -23,7 +23,7 @@ export default function Navigate() {
           </S.NewWrap>
         </S.NaviItem>
         <S.NaviItem>
-          <S.Nav href="/">구장 예약</S.Nav>
+          <S.Nav href="/reserve">구장 예약</S.Nav>
         </S.NaviItem>
       </S.NaviWrapper>
     </S.NaviContainer>
