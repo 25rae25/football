@@ -38,12 +38,6 @@ export default function IntroduceDetail() {
           <S.IntroduceDetailContent>20~30대</S.IntroduceDetailContent>
         </S.IntroduceDetail>
         <S.IntroduceDetail>
-          <S.IntroduceDetailTitle>운동 장소</S.IntroduceDetailTitle>
-          <S.IntroduceDetailContent>
-            서울교육대학교 운동장
-          </S.IntroduceDetailContent>
-        </S.IntroduceDetail>
-        <S.IntroduceDetail>
           <S.IntroduceDetailTitle>회비</S.IntroduceDetailTitle>
           <S.IntroduceDetailContent>20,000원</S.IntroduceDetailContent>
         </S.IntroduceDetail>
