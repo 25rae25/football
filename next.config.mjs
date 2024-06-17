@@ -21,3 +21,19 @@ export default nextConfig;
 //     ],
 //   },
 // };
+
+// // next.config.js
+// module.exports = {
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: 'https',
+//         hostname: 'gwmbluhqzjsorxlkmsij.supabase.co',
+//         port: '',
+//         pathname: '/storage/v1/object/sign/soccer/**',
+//       },
+//     ],
+//     dangerouslyAllowSVG: true,
+//     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+//   },
+// };

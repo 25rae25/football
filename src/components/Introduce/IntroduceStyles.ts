@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 
 export const IntroduceWrapper = styled.div`
   max-width: 1024px;
@@ -7,6 +8,11 @@ export const IntroduceWrapper = styled.div`
 `;
 
 export const IntroduceWrap = styled.div``;
+
+export const IntroduceImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`;
 
 export const Introduce = styled.div`
   display: flex;

@@ -19,7 +19,7 @@ export const ExploreItem = styled.div`
   min-width: 60px;
 `;
 
-export const ExploreText = styled.span`
+export const ExploreText = styled.div`
   margin-top: 5px;
   font-size: 12px;
 `;
@@ -30,6 +30,6 @@ export const Nav = styled(Link)`
 `;
 
 export const ExploreImage = styled(Image)`
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 `;

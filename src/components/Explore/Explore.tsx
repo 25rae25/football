@@ -37,7 +37,12 @@ export default function Explore() {
         </S.ExploreItem>
         <S.ExploreItem>
           <S.Nav href="/start">
-            {/* 이미지 들어갈곳 */}
+            {/* <S.ExploreImage
+              src=""
+              width={24}
+              height={24}
+              alt="메인사진"
+            /> */}
             <S.ExploreText>시작하기</S.ExploreText>
           </S.Nav>
         </S.ExploreItem>
