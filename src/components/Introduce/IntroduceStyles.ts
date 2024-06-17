@@ -1,31 +1,33 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
+import Link from "next/link";
 
 export const IntroduceWrapper = styled.div`
   max-width: 1024px;
   margin: 0 auto;
-  margin-top: 40px;
+  padding-top: 1rem;
 `;
 
-export const IntroduceWrap = styled.div``;
-
-export const IntroduceImage = styled(Image)`
-  width: 100%;
-  height: 100%;
-`;
-
-export const Introduce = styled.div`
+export const IntroduceWrap = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 20px 15px;
-  border-bottom: 1px solid #ddd;
+  margin-top: 1rem;
 `;
 
-export const IntroduceTitle = styled.div`
-  font-size: 17px;
-  /* font-weight: bold; */
+export const IntroduceTitle = styled.h2`
+  font-weight: 700;
 `;
 
-export const IntroduceContent = styled.div`
-  color: #807b7b;
+export const IntroduceEnroll = styled(Link)`
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px;
+  border-radius: 22px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1570ff;
+  border: none;
+  text-align: center;
+  :hover {
+    background-color: #0f56c6;
+  }
 `;
