@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 import Link from "next/link";
 
 export const IntroduceWrapper = styled.div`
@@ -30,4 +31,39 @@ export const IntroduceEnroll = styled(Link)`
   :hover {
     background-color: #0f56c6;
   }
+`;
+
+export const TeamWrapper = styled.ul`
+  width: 100%;
+`;
+
+export const TeamWrap = styled.li`
+  width: 24%;
+  margin: 1%;
+`;
+
+export const Team = styled(Link)`
+  text-decoration: none;
+  color: #000;
+`;
+
+export const TeamImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`;
+
+export const TeamTitle = styled.div`
+  font-size: 14px;
+  margin: 10px 0;
+`;
+
+export const TeamContent = styled.div`
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 600;
+`;
+
+export const TeamDate = styled.div`
+  color: darkgray;
+  opacity: 0.75;
 `;
