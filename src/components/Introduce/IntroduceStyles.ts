@@ -35,6 +35,8 @@ export const IntroduceEnroll = styled(Link)`
 
 export const TeamWrapper = styled.ul`
   width: 100%;
+  margin-top: 20px;
+  display: flex;
 `;
 
 export const TeamWrap = styled.li`

@@ -32,6 +32,9 @@ export const LabelInput = styled.input`
   &:focus::placeholder {
     color: transparent;
   }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+  }
 `;
 
 export const ErrorText = styled.p`

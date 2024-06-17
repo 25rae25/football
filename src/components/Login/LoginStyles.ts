@@ -38,6 +38,9 @@ export const LoginInput = styled.input`
   padding: 0px 12px;
   font-size: 16px;
   box-sizing: border-box;
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+  }
 `;
 
 export const LoginButton = styled.button`
