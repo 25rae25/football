@@ -28,3 +28,8 @@ export const Nav = styled(Link)`
   text-decoration: none;
   color: #000;
 `;
+
+export const ExploreImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`;
