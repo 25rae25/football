@@ -72,3 +72,8 @@ export const Nav = styled(Link)`
   color: #000;
   font-size: 18px;
 `;
+
+export const Logo = styled.span`
+  font-weight: 700;
+  font-size: 20px;
+`;

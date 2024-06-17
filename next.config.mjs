@@ -22,18 +22,17 @@ export default nextConfig;
 //   },
 // };
 
-// // next.config.js
-// module.exports = {
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
 //   images: {
 //     remotePatterns: [
 //       {
-//         protocol: 'https',
-//         hostname: 'gwmbluhqzjsorxlkmsij.supabase.co',
-//         port: '',
-//         pathname: '/storage/v1/object/sign/soccer/**',
+//         protocol: "https",
+//         hostname: "gwmbluhqzjsorxlkmsij.supabase.co",
+//         pathname: "/storage/v1/object/sign/**",
 //       },
 //     ],
-//     dangerouslyAllowSVG: true,
-//     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
 //   },
 // };
+
+// export default nextConfig;

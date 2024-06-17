@@ -37,6 +37,7 @@ export default function SignupContainer() {
     }));
   }, []);
 
+  // 이메일 설정
   useEffect(() => {
     const emailRegex =
       /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
@@ -54,6 +55,7 @@ export default function SignupContainer() {
     }
   }, [inputValue?.email]);
 
+  // 이름 설정
   useEffect(() => {
     if (inputValue?.name.length < 2 || inputValue?.name.length >= 5) {
       setNameMessage("이름 형식이 툴렸습니다. 다시 확인해 주세요.");
@@ -67,6 +69,7 @@ export default function SignupContainer() {
     }
   }, [inputValue?.name]);
 
+  // 비밀번호 설정
   useEffect(() => {
     const passwordRegex =
       /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
@@ -86,6 +89,7 @@ export default function SignupContainer() {
     }
   }, [inputValue.password]);
 
+  // 비밀번호 확인
   useEffect(() => {
     if (inputValue.password === inputValue.passwordConfirm) {
       setPasswordConfirmMessage("");
@@ -96,6 +100,7 @@ export default function SignupContainer() {
     }
   }, [inputValue.passwordConfirm]);
 
+  // backend 전송
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();

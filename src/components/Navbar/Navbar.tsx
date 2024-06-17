@@ -6,7 +6,9 @@ export default function Navbar() {
   return (
     <S.NavbarWrapper>
       <S.Navbar>
-        <S.Nav href="/">Logo</S.Nav>
+        <S.Nav href="/">
+          <S.Logo>SOCCERINFO</S.Logo>
+        </S.Nav>
         <S.SearchWrapper>
           <S.SearchWrap>
             <S.SearchIcon className="search" />
