@@ -7,20 +7,21 @@ export default function List() {
     <S.MainWrapper>
       <ul>
         <li>
-          {/* Link로 감싸야하는 곳 */}
-          <S.MainWrap>
-            <S.MainTime>16:00</S.MainTime>
-            <S.MainInfo>
-              <div>서울 영등포 SKY풋살파크 A구장</div>
-              <S.MainMatch>
-                <S.MainOptions>6vs6</S.MainOptions>
-                <S.MainOptions>3파전</S.MainOptions>
-              </S.MainMatch>
-            </S.MainInfo>
-            <S.MainStatusWrap>
-              <S.StatusYet>마감임박!</S.StatusYet>
-            </S.MainStatusWrap>
-          </S.MainWrap>
+          <S.MainLink href="/">
+            <S.MainWrap>
+              <S.MainTime>16:00</S.MainTime>
+              <S.MainInfo>
+                <div>서울 영등포 SKY풋살파크 A구장</div>
+                <S.MainMatch>
+                  <S.MainOptions>6vs6</S.MainOptions>
+                  <S.MainOptions>3파전</S.MainOptions>
+                </S.MainMatch>
+              </S.MainInfo>
+              <S.MainStatusWrap>
+                <S.StatusYet>마감임박!</S.StatusYet>
+              </S.MainStatusWrap>
+            </S.MainWrap>
+          </S.MainLink>
         </li>
         <li>
           {/* Link로 감싸야하는 곳 */}

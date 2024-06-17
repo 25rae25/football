@@ -1,8 +1,14 @@
 import styled from "@emotion/styled";
+import Link from "next/link";
 
 export const MainWrapper = styled.div`
   max-width: 1024px;
   margin: 0 auto;
+`;
+
+export const MainLink = styled(Link)`
+  text-decoration: none;
+  color: #000;
 `;
 
 export const MainWrap = styled.div`
