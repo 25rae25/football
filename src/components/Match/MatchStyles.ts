@@ -9,7 +9,6 @@ export const Section = styled.div`
 
 export const MatchContainer = styled.div`
   width: 60%;
-
   background-color: #fff;
   height: fit-content;
 `;
@@ -18,6 +17,7 @@ export const MatchWrapper = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  border-bottom: 20px solid #f2f5f7;
 `;
 
 export const MatchWrap = styled.div`
@@ -79,8 +79,7 @@ export const SubmitBar = styled.div`
   background-color: #00d281;
   font-size: 12px;
   text-align: center;
-  height: 25px;
-  line-height: 25px;
+  padding: 8px;
   cursor: pointer;
   color: #fff;
 `;
@@ -94,4 +93,5 @@ export const SubmitButton = styled.button`
   border-radius: 6px;
   padding: 12px;
   margin: 20px 0;
+  width: 50%;
 `;

@@ -1,5 +1,6 @@
 "use client";
 
+import MatchRule from "./MatchRule";
 import * as S from "./MatchStyles";
 
 export default function Match() {
@@ -21,6 +22,7 @@ export default function Match() {
             <S.IconTitle>풋살화/운동화</S.IconTitle>
           </S.MatchWrap>
         </S.MatchWrapper>
+        <MatchRule />
       </S.MatchContainer>
       <S.SubmitWrapper>
         <S.SubmitWrap>
