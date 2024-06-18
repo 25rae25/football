@@ -4,6 +4,7 @@ import * as S from "./ReserveStyles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Match from "../Match/Match";
 
 export default function Reserve() {
   const settings = {
@@ -35,11 +36,7 @@ export default function Reserve() {
             />
           ))}
         </Slider>
-        <div>
-          <div>6vs6 3파전</div>
-          <div>10~15명</div>
-          <div>풋살화/운동화</div>
-        </div>
+        <Match />
       </S.ReserveWrap>
     </S.ReserveWrapper>
   );
