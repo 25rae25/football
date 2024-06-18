@@ -9,17 +9,19 @@ export const Section = styled.div`
 
 export const MatchContainer = styled.div`
   width: 60%;
-  height: auto;
+
   background-color: #fff;
+  height: fit-content;
 `;
 
 export const MatchWrapper = styled.div`
   padding: 20px;
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const MatchWrap = styled.div`
-  padding: 20px 0;
+  padding: 10px 0;
   display: flex;
 `;
 
@@ -53,10 +55,11 @@ export const SubmitWrapper = styled.div`
   margin: 0 auto;
   background-color: #fff;
   margin-left: 10px;
+  height: fit-content;
 `;
 
 export const SubmitWrap = styled.div`
-  padding: 20px 10px;
+  padding: 20px;
 `;
 
 export const MatchTime = styled.div`
@@ -69,15 +72,15 @@ export const MatchPlace = styled.div`
   color: #282b33;
   font-size: 22px;
   font-weight: 400;
-  margin-bottom: 3px;
+  padding-bottom: 20px;
 `;
 
 export const SubmitBar = styled.div`
   background-color: #00d281;
   font-size: 12px;
   text-align: center;
-  height: 32px;
-  line-height: 32px;
+  height: 25px;
+  line-height: 25px;
   cursor: pointer;
   color: #fff;
 `;
