@@ -12,6 +12,7 @@ export const IntroduceWrap = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  padding: 0 20px;
 `;
 
 export const IntroduceTitle = styled.h2`
@@ -42,6 +43,7 @@ export const TeamWrapper = styled.ul`
 export const TeamWrap = styled.li`
   width: 24%;
   margin: 1%;
+  /* padding: 0 20px; */
 `;
 
 export const Team = styled(Link)`
