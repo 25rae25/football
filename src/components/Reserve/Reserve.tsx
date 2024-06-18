@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Match from "../Match/Match";
-import MatchRule from "../Match/MatchRule";
 
 export default function Reserve() {
   const settings = {

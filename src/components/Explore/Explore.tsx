@@ -8,12 +8,12 @@ export default function Explore() {
       <S.ExploreWrap>
         <S.ExploreItem>
           <S.Nav href="/introduce">
-            <S.ExploreImage
+            {/* <S.ExploreImage
               src="https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/teamIntro.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvdGVhbUludHJvLnBuZyIsImlhdCI6MTcxODYwMTk3OCwiZXhwIjoxNzUwMTM3OTc4fQ.DM5PN0mfpyShfKYqHYPhV20jP9lnsJS4754mzjOmYfw&t=2024-06-17T05%3A26%3A19.281Z"
               width={24}
               height={24}
               alt="메인사진"
-            />
+            /> */}
             <S.ExploreText>팀소개</S.ExploreText>
           </S.Nav>
         </S.ExploreItem>
