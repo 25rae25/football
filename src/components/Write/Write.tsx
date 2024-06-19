@@ -81,7 +81,7 @@ export default function Write({ handleInput, handleSubmit }: Props) {
           placeholder="안녕하세요 FC서초 입니다"
           handleInput={handleInput}
         />
-        <S.ImageInput type="file" multiple />
+        <S.ImageInput type="file" />
         <S.SubmitButton>작성하기</S.SubmitButton>
         {/* <S.EditButton>수정하기</S.EditButton> */}
       </S.WriteForm>
