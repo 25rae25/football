@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import * as S from "./InputStyles";
+import * as S from "./TemaInputStyles";
 
 type Props = {
   title: string;
@@ -7,23 +7,21 @@ type Props = {
   id: string;
   name: string;
   placeholder: string;
-  errorMessage?: string;
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function Input({
+export default function TemaInput({
   title,
   type,
   id,
   name,
   placeholder,
-  errorMessage,
   handleInput,
 }: Props) {
   return (
-    <S.LabelWrap>
-      <S.LabelTitle>{title}</S.LabelTitle>
-      <S.LabelInput
+    <S.Write>
+      <S.WritelTitle>{title}</S.WritelTitle>
+      <S.WriteInput
         type={type}
         id={id}
         name={name}
@@ -32,7 +30,6 @@ export default function Input({
         placeholder={placeholder}
         onChange={handleInput}
       />
-      <S.ErrorText>{errorMessage}</S.ErrorText>
-    </S.LabelWrap>
+    </S.Write>
   );
 }
