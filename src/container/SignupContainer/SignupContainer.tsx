@@ -9,15 +9,16 @@ import {
   useState,
 } from "react";
 import * as apis from "@/apis";
+import { useRouter } from "next/navigation";
 
 export default function SignupContainer() {
+  const router = useRouter();
   const [inputValue, setInputValue] = useState({
     email: "",
     name: "",
     password: "",
     passwordConfirm: "",
   });
-  const [modal, setModal] = useState<boolean>(false);
 
   // 에러 메세지
   const [emailMessage, setEmailMessage] = useState("");
@@ -107,6 +108,8 @@ export default function SignupContainer() {
       e.preventDefault();
       try {
         await apis.postSignup(inputValue);
+        alert("회원가입 완료되었습니다.");
+        router.push("/login");
       } catch (error) {
         console.error("가입을 실패했습니다.");
       }

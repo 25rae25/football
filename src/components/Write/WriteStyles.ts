@@ -44,3 +44,17 @@ export const WriteContent = styled.div`
 `;
 
 export const ImageInput = styled.input``;
+
+export const SubmitButton = styled.button`
+  background-color: #1570ff;
+  color: #fff;
+  text-align: center;
+  padding: 8px 5px;
+`;
+
+export const EditButton = styled.button`
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 8px 5px;
+`;

@@ -1,14 +1,20 @@
 "use client";
 
+import { ChangeEvent, FormEvent } from "react";
 import * as S from "./WriteStyles";
 
-export default function WriteWrap() {
+type Props = {
+  handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
+};
+
+export default function WriteWrap({ handleInput, handleSubmit }: Props) {
   return (
     <S.WriteWrapper>
-      <S.WriteForm>
+      <S.WriteForm onSubmit={handleSubmit}>
         <S.Write>
           <S.WritelTitle>팀명</S.WritelTitle>
-          <S.WriteInput placeholder="FC 한국" />
+          <S.WriteInput handleInput={handleInput} placeholder="FC 한국" />
         </S.Write>
         <S.Write>
           <S.WritelTitle>주요 활동지역</S.WritelTitle>
@@ -39,6 +45,8 @@ export default function WriteWrap() {
           <S.WriteInput placeholder="안녕하세요 FC서초 입니다" />
         </S.Write>
         <S.ImageInput type="file" multiple />
+        <S.SubmitButton>작성하기</S.SubmitButton>
+        {/* <S.EditButton>수정하기</S.EditButton> */}
       </S.WriteForm>
     </S.WriteWrapper>
   );
