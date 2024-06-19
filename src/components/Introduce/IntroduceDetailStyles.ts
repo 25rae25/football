@@ -10,8 +10,10 @@ export const IntroduceDetailWrapper = styled.div`
 export const IntroduceDetailWrap = styled.div``;
 
 export const TeamImage = styled(Image)`
-  width: 100%;
-  height: 100%;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  display: block;
 `;
 
 export const IntroduceDetail = styled.div`

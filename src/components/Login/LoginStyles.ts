@@ -54,6 +54,7 @@ export const LoginButton = styled.button`
   border-radius: 12px;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 `;
 
 export const FindForm = styled.div`

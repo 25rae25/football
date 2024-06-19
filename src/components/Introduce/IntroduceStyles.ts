@@ -55,6 +55,7 @@ export const TeamImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  height: fit-content;
 `;
 
 export const TeamTitle = styled.div`

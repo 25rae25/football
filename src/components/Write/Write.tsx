@@ -9,14 +9,10 @@ type Props = {
   handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
 };
 
-// WriteWrap -->  Write 변경
 export default function Write({ handleInput, handleSubmit }: Props) {
   return (
     <S.WriteWrapper>
       <S.WriteForm onSubmit={handleSubmit}>
-        {/* <S.WritelTitle>팀명</S.WritelTitle> */}
-        {/* // handleInput={handleInput} --> onChange={handleInput} */}
-        {/* <S.WriteInput onChange={handleInput} placeholder="FC 한국" /> */}
         <TemaInput
           title="팀명"
           type="text"
