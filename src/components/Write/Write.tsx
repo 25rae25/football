@@ -8,13 +8,15 @@ type Props = {
   handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
 };
 
-export default function WriteWrap({ handleInput, handleSubmit }: Props) {
+// WriteWrap -->  Write 변경
+export default function Write({ handleInput, handleSubmit }: Props) {
   return (
     <S.WriteWrapper>
       <S.WriteForm onSubmit={handleSubmit}>
         <S.Write>
           <S.WritelTitle>팀명</S.WritelTitle>
-          <S.WriteInput handleInput={handleInput} placeholder="FC 한국" />
+          {/* // handleInput={handleInput} --> onChange={handleInput} */}
+          <S.WriteInput onChange={handleInput} placeholder="FC 한국" />
         </S.Write>
         <S.Write>
           <S.WritelTitle>주요 활동지역</S.WritelTitle>
