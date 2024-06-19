@@ -8,5 +8,5 @@ export const postSignup = (data: {
   password: string;
   name: string;
 }) => {
-  return axios.post(`${getApiUrl()}/signup`, { ...data });
+  return axios.post(`${getApiUrl()}/auths/sign-up`, { ...data });
 };
