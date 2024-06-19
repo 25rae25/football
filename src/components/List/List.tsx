@@ -5,9 +5,9 @@ import * as S from "./ListStyles";
 export default function List() {
   return (
     <S.MainWrapper>
-      <ul>
-        <li>
-          <S.MainLink href="/">
+      <div>
+        <div>
+          <S.MainLink href="/reserve">
             <S.MainWrap>
               <S.MainTime>16:00</S.MainTime>
               <S.MainInfo>
@@ -22,8 +22,8 @@ export default function List() {
               </S.MainStatusWrap>
             </S.MainWrap>
           </S.MainLink>
-        </li>
-        <li>
+        </div>
+        <div>
           {/* Link로 감싸야하는 곳 */}
           <S.MainWrap>
             <S.MainTime>17:00</S.MainTime>
@@ -38,8 +38,8 @@ export default function List() {
               <S.StatusFinish>마감</S.StatusFinish>
             </S.MainStatusWrap>
           </S.MainWrap>
-        </li>
-        <li>
+        </div>
+        <div>
           {/* Link로 감싸야하는 곳 */}
           <S.MainWrap>
             <S.MainTime>17:00</S.MainTime>
@@ -54,8 +54,8 @@ export default function List() {
               <S.StatusStart>신청가능</S.StatusStart>
             </S.MainStatusWrap>
           </S.MainWrap>
-        </li>
-      </ul>
+        </div>
+      </div>
     </S.MainWrapper>
   );
 }
