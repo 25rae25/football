@@ -1,10 +1,12 @@
 import styled from "@emotion/styled";
 
-export const WriteWrap = styled.div`
+export const WriteWrapper = styled.div`
   max-width: 1024px;
   margin: 0 auto;
   margin-top: 40px;
 `;
+
+export const WriteForm = styled.form``;
 
 export const Write = styled.div`
   display: flex;
@@ -40,3 +42,5 @@ export const WriteInput = styled.input`
 export const WriteContent = styled.div`
   color: #807b7b;
 `;
+
+export const ImageInput = styled.input``;

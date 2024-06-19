@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
-import Image from "next/image";
+import { LuUsers } from "react-icons/lu";
+import { FiUserPlus } from "react-icons/fi";
+import { TiHeartOutline } from "react-icons/ti";
+import { CiMemoPad } from "react-icons/ci";
 
 export const ExploreWrapper = styled.div`
   max-width: 1024px;
@@ -29,7 +32,25 @@ export const Nav = styled(Link)`
   color: #000;
 `;
 
-export const ExploreImage = styled(Image)`
+export const UsersIcon = styled(LuUsers)`
+  width: 24px;
+  height: 24px;
+  color: #1570ff;
+`;
+
+export const UserPlusIcon = styled(FiUserPlus)`
+  width: 24px;
+  height: 24px;
+  color: #00cb7f;
+`;
+
+export const HeartIcon = styled(TiHeartOutline)`
+  width: 24px;
+  height: 24px;
+  color: red;
+`;
+
+export const MemoIcon = styled(CiMemoPad)`
   width: 24px;
   height: 24px;
 `;
