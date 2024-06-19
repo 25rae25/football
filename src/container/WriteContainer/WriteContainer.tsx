@@ -8,6 +8,8 @@ import Write from "@/components/Write/Write";
 // teamId 필요 없을 듯 싶은뎅 prop으로 받아 오는데 page에는 뭘 주는게 없는뎅?
 // 어디서 teamId를 가져오는건지 모르겠는뎅 ?
 export default function WriteContainer() {
+  console.log("왜 안되지?");
+
   const router = useRouter();
 
   const [writeValue, setWriteValue] = useState({
