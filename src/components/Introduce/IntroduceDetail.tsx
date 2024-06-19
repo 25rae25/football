@@ -41,6 +41,16 @@ export default function IntroduceDetail() {
           <S.IntroduceDetailTitle>회비</S.IntroduceDetailTitle>
           <S.IntroduceDetailContent>20,000원</S.IntroduceDetailContent>
         </S.IntroduceDetail>
+        <S.IntroduceDetail>
+          <S.IntroduceDetailTitle>대표번호</S.IntroduceDetailTitle>
+          <S.IntroduceDetailContent>010-2518-2688</S.IntroduceDetailContent>
+        </S.IntroduceDetail>
+        <S.IntroduceDetail>
+          <S.IntroduceDetailTitle>소개</S.IntroduceDetailTitle>
+          <S.IntroduceDetailContent>
+            안녕하세요 FC서초팀 입니다.
+          </S.IntroduceDetailContent>
+        </S.IntroduceDetail>
       </S.IntroduceDetailWrap>
     </S.IntroduceDetailWrapper>
   );

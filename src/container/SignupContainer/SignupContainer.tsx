@@ -17,6 +17,7 @@ export default function SignupContainer() {
     password: "",
     passwordConfirm: "",
   });
+  const [modal, setModal] = useState<boolean>(false);
 
   // 에러 메세지
   const [emailMessage, setEmailMessage] = useState("");

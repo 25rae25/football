@@ -11,7 +11,7 @@ export default function Navbar() {
         </S.Nav>
         <S.SearchWrapper>
           <S.SearchWrap>
-            <S.SearchIcon className="search" />
+            <S.SearchIcon />
             <S.Searchbar
               type="search"
               id="search"
@@ -20,7 +20,8 @@ export default function Navbar() {
             />
           </S.SearchWrap>
           <S.Nav href="/login">
-            <S.UserIcon className="user" />
+            <S.UserIcon />
+            <S.LogginIcon />
           </S.Nav>
         </S.SearchWrapper>
       </S.Navbar>

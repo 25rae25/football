@@ -30,6 +30,14 @@ export default function WriteWrap() {
           <S.WritelTitle>회비</S.WritelTitle>
           <S.WriteInput placeholder="20,000원" />
         </S.Write>
+        <S.Write>
+          <S.WritelTitle>대표번호</S.WritelTitle>
+          <S.WriteInput placeholder="010-2518-2688" />
+        </S.Write>
+        <S.Write>
+          <S.WritelTitle>소개</S.WritelTitle>
+          <S.WriteInput placeholder="안녕하세요 FC서초 입니다" />
+        </S.Write>
         <S.ImageInput type="file" multiple />
       </S.WriteForm>
     </S.WriteWrapper>
