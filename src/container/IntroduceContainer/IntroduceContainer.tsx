@@ -21,12 +21,15 @@ export default function IntroduceContainer() {
     fetchTeams();
   }, []);
 
+  console.log("teams ", teams);
+
   return (
-    <>
-      {/* 여기에 반복문인가용?? */}
-      {teams?.map((teams) => (
-        <Introduce key={teams.id} />
-      ))}
-    </>
+    // <>
+    //   {/* 여기에 반복문인가용?? */}
+    //   {teams?.map((teams) => (
+    //     <Introduce key={teams.id} />
+    //   ))}
+    // </>
+    <Introduce teams={teams} />
   );
 }
