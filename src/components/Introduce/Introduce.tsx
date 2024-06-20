@@ -2,25 +2,10 @@
 
 import dayjs from "dayjs";
 import * as S from "./IntroduceStyles";
+import { ITeam } from "@/container/IntroduceContainer/IntroTeamTypes";
 
 interface TeamTypes {
-  teams: [
-    {
-      address?: string;
-      createdAt: Date;
-      fee?: number;
-      id: number;
-      imageUrl: string;
-      introduction?: string;
-      name: string;
-      phone?: string;
-      province: string;
-      range?: string;
-      time?: string;
-      title: string;
-      userId: number;
-    }
-  ];
+  teams: ITeam[];
 }
 
 export default function Introduce({ teams }: TeamTypes) {
