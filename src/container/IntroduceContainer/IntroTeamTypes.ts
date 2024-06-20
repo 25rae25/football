@@ -1,4 +1,4 @@
-export interface TeamTypes {
+export interface ITeam {
   address?: string;
   createdAt: Date;
   fee?: number;
@@ -12,4 +12,8 @@ export interface TeamTypes {
   time: string;
   title: string;
   userId: number;
+}
+
+export interface TeamTypes {
+  teams: ITeam[];
 }

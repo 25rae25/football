@@ -3,10 +3,10 @@
 import * as apis from "@/apis";
 import Introduce from "@/components/Introduce/Introduce";
 import { useEffect, useState } from "react";
-import { TeamTypes } from "./IntroTeamTypes";
+import { ITeam } from "./IntroTeamTypes";
 
 export default function IntroduceContainer() {
-  const [teams, setTeams] = useState<TeamTypes[]>([]);
+  const [teams, setTeams] = useState<ITeam[]>([]);
 
   useEffect(() => {
     async function fetchTeams() {
