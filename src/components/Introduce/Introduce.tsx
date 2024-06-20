@@ -20,12 +20,12 @@ export default function Introduce({ teams }: TeamTypes) {
           teams?.map((item: any) => (
             <S.TeamWrap key={item.id}>
               <S.Team href="/introduceDetail">
-                {/* <S.TeamImage
+                <S.TeamImage
                   src={item?.imageUrl}
                   width={24}
                   height={24}
                   alt="팀사진"
-                /> */}
+                />
                 <S.TeamTitle>{item?.name}</S.TeamTitle>
                 <S.TeamContent>{item?.introduction}</S.TeamContent>
                 <S.TeamDate>
