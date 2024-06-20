@@ -1,15 +1,14 @@
 export interface TeamTypes {
-  // useid: number;
-  address: string;
+  address?: string;
   createdAt: Date;
-  fee: number;
+  fee?: number;
   id: number;
   imageUrl: string;
   introduction: string;
   name: string;
-  phone: string;
+  phone?: string;
   province: string;
-  range: string;
+  range?: string;
   time: string;
   title: string;
   userId: number;

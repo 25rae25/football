@@ -13,7 +13,6 @@ export default function IntroduceContainer() {
       try {
         const response = await apis.getTeams();
         setTeams(response?.data?.item?.teams);
-        console.log("response", response);
       } catch (error) {
         console.error("팀정보를 불러오지 못했습니다.");
       }
@@ -21,15 +20,5 @@ export default function IntroduceContainer() {
     fetchTeams();
   }, []);
 
-  console.log("teams ", teams);
-
-  return (
-    // <>
-    //   {/* 여기에 반복문인가용?? */}
-    //   {teams?.map((teams) => (
-    //     <Introduce key={teams.id} />
-    //   ))}
-    // </>
-    <Introduce teams={teams} />
-  );
+  return <Introduce teams={teams} />;
 }
