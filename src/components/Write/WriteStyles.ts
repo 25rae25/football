@@ -37,7 +37,7 @@ export const SubmitButton = styled.button`
   border-radius: 12px;
   font-weight: 500;
   padding: 20px;
-  /* margin-top: 20px; */
+  margin-top: 20px;
   border: none;
   width: 40%;
   display: block;
