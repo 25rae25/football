@@ -31,3 +31,8 @@ export const postWrite = (data: {
 export const getTeams = () => {
   return axios.get(`${getApiUrl()}/teams?page=1&size=1`);
 };
+
+// 팀 정보 불러오기(개별)
+export const getTeam = (teamId: number) => {
+  return axios.get(`${getApiUrl()}/teams/${teamId}`);
+};
