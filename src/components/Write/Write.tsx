@@ -7,6 +7,7 @@ import TemaInput from "../TemaInput/TemaInput";
 type Props = {
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  handleClick: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export default function Write({ handleInput, handleSubmit }: Props) {
@@ -77,7 +78,10 @@ export default function Write({ handleInput, handleSubmit }: Props) {
           placeholder="안녕하세요 FC서초 입니다"
           handleInput={handleInput}
         />
-        <S.ImageInput type="file" />
+        <S.ImageLabel htmlFor="inputFile">
+          <S.ImageInput type="file" id="inputFile" />
+        </S.ImageLabel>
+        {/* handleClick={handleClick} */}
         <S.SubmitButton>작성하기</S.SubmitButton>
         {/* <S.EditButton>수정하기</S.EditButton> */}
       </S.WriteForm>

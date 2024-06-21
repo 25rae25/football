@@ -1,12 +1,14 @@
 "use client";
 
-import { ChangeEvent, FormEvent, useCallback, useState } from "react";
+import { ChangeEvent, FormEvent, useCallback, useRef, useState } from "react";
 import * as apis from "@/apis";
 import { useRouter } from "next/navigation";
 import Write from "@/components/Write/Write";
 
 export default function WriteContainer() {
   const router = useRouter();
+  const [files, setFiles] = useState();
+  const fileRef = useRef<HTMLInputElement>(null);
 
   const [writeValue, setWriteValue] = useState({
     name: "",
@@ -42,5 +44,15 @@ export default function WriteContainer() {
     [writeValue, router]
   );
 
-  return <Write handleInput={handleInput} handleSubmit={handleSubmit} />;
+  const handleClick = () => {
+    fileRef?.current?.click();
+  };
+
+  return (
+    <Write
+      handleInput={handleInput}
+      handleSubmit={handleSubmit}
+      handleClick={handleClick}
+    />
+  );
 }

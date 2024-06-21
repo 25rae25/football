@@ -6,10 +6,10 @@ import "react-calendar/dist/Calendar.css";
 import * as S from "./CalendarStyles";
 
 export default function MyCalendar() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [value, onChange] = useState(new Date()); // 초기값은 현재 날짜
   return (
     <>
-      <S.StyleCalendar value={startDate} />
+      <S.StyleCalendar value={value} />
     </>
   );
 }

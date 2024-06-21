@@ -12,7 +12,22 @@ export const WriteContent = styled.div`
   color: #807b7b;
 `;
 
-export const ImageInput = styled.input``;
+export const ImageLabel = styled.label`
+  display: block;
+  padding: 20px 40px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  margin: 20px;
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+export const ImageInput = styled.input`
+  display: none;
+`;
 
 export const SubmitButton = styled.button`
   background-color: #1570ff;
