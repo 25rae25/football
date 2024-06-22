@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 
 export const WriteWrapper = styled.div`
   max-width: 1024px;
@@ -27,6 +28,11 @@ export const ImageLabel = styled.label`
 
 export const ImageInput = styled.input`
   display: none;
+`;
+
+export const TeamImg = styled(Image)`
+  width: 100%;
+  height: 100%;
 `;
 
 export const SubmitButton = styled.button`
