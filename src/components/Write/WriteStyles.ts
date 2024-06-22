@@ -15,15 +15,13 @@ export const WriteContent = styled.div`
 
 export const ImageLabel = styled.label`
   display: block;
-  padding: 20px 40px;
+  margin: 20px auto;
+  align-items: center;
+  border: 2px dashed #1475cf;
+  height: 300px;
+  width: 500px;
   cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  margin: 20px;
-  &:hover {
-    background-color: #0056b3;
-  }
+  border-radius: 5px;
 `;
 
 export const ImageInput = styled.input`
