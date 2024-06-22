@@ -17,3 +17,7 @@ export interface ITeam {
 export interface TeamTypes {
   teams: ITeam[];
 }
+
+export interface Team {
+  id: number;
+}

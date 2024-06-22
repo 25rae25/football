@@ -3,8 +3,9 @@
 import * as apis from "@/apis";
 import IntroduceDetail from "@/components/Introduce/IntroduceDetail";
 import { useEffect } from "react";
+import { Team } from "../IntroduceContainer/IntroTeamTypes";
 
-export default function IntroduceDetailContainer() {
+export default function IntroduceDetailContainer({ id }: Team) {
   // useEffect(() => {
   //   async function fetchTeam() {
   //     try {
@@ -16,5 +17,5 @@ export default function IntroduceDetailContainer() {
   //   fetchTeam();
   // }, []);
 
-  return <IntroduceDetail />;
+  return <IntroduceDetail id={id} />;
 }

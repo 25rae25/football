@@ -1,12 +1,12 @@
 "use client";
 
+import { Team } from "@/container/IntroduceContainer/IntroTeamTypes";
 import * as S from "./IntroduceDetailStyles";
 
-export default function IntroduceDetail() {
+export default function IntroduceDetail({ id }: Team) {
   return (
     <S.IntroduceDetailWrapper>
       <S.IntroduceDetailWrap>
-        {/* 이미지 height 크기 조정 */}
         <S.TeamImage
           src="https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/soccerteam.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvc29jY2VydGVhbS5qcGciLCJpYXQiOjE3MTg2MDU0NzcsImV4cCI6MTc1MDE0MTQ3N30.AYNUJCrVYQ1wVutyY_Fud10dra8b7aHGKnB9_jCZ6oc&t=2024-06-17T06%3A24%3A37.742Z"
           width={1024}
