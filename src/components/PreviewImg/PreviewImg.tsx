@@ -1,20 +1,21 @@
 import { useState } from "react";
 
 export default function PreviewImg() {
-  //   const [imgPreview, setImgPreview] = useState("");
+  const [imgPreview, setImgPreview] = useState(null);
+  const [fileName, setFileName] = useState("사진이 없습니다.");
 
-  //   const addPreviewImg = (file: any) => {
-  //     if (file) {
-  //       const reader = new FileReader();
-  //       reader.readAsDataURL(file);
-  //       return new Promise((resolve) => {
-  //         reader.onload = () => {
-  //           setImgPreview(reader.result);
-  //           resolve();
-  //         };
-  //       });
-  //     }
-  //   };
+  // const addPreviewImg = (file: any) => {
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.readAsDataURL(file);
+  //     return new Promise((resolve) => {
+  //       reader.onload = () => {
+  //         setImgPreview(reader.result);
+  //         resolve();
+  //       };
+  //     });
+  //   }
+  // };
 
   return (
     <>
