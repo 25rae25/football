@@ -3,8 +3,6 @@
 import * as apis from "@/apis";
 import IntroduceDetail from "@/components/Introduce/IntroduceDetail";
 import { useEffect, useState } from "react";
-import { Team } from "../IntroduceContainer/IntroTeamTypes";
-import { useRouter } from "next/navigation";
 import { ICommon } from "@/common/types/CommonTypes";
 
 type Props = {
@@ -12,7 +10,6 @@ type Props = {
 };
 
 export default function IntroduceDetailContainer({ teamId }: Props) {
-  // id값으로 데이터를 불러와라
   const [teamData, setTeamData] = useState<ICommon>({
     teamId: 0,
     name: "",
