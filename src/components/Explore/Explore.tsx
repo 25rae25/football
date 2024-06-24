@@ -26,7 +26,7 @@ export default function Explore() {
         </S.ExploreItem>
         <S.ExploreItem>
           <S.Nav href="/">
-            {/* 이미지 들어갈곳 */}
+            <S.FireIcon />
             <S.ExploreText>챌린지</S.ExploreText>
           </S.Nav>
         </S.ExploreItem>

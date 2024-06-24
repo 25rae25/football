@@ -4,6 +4,7 @@ import { LuUsers } from "react-icons/lu";
 import { FiUserPlus } from "react-icons/fi";
 import { TiHeartOutline } from "react-icons/ti";
 import { CiMemoPad } from "react-icons/ci";
+import { AiFillFire } from "react-icons/ai";
 
 export const ExploreWrapper = styled.div`
   max-width: 1024px;
@@ -42,6 +43,12 @@ export const UserPlusIcon = styled(FiUserPlus)`
   width: 24px;
   height: 24px;
   color: #00cb7f;
+`;
+
+export const FireIcon = styled(AiFillFire)`
+  width: 24px;
+  height: 24px;
+  color: #feb700;
 `;
 
 export const HeartIcon = styled(TiHeartOutline)`

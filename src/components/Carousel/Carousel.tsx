@@ -23,8 +23,8 @@ export default function Carousel() {
   };
 
   const banner = [
-    "https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/banner01.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvYmFubmVyMDEucG5nIiwiaWF0IjoxNzE4MDI0NjAxLCJleHAiOjE3NDk1NjA2MDF9.XyoO4qQW7im_-QZXMPxPCxz-FUM5MqK8awwUGs9l0j4&t=2024-06-10T13%3A03%3A21.172Z",
-    "https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/banner02.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvYmFubmVyMDIucG5nIiwiaWF0IjoxNzE4MDI0Njc4LCJleHAiOjE3NDk1NjA2Nzh9.tXQzx7Z-svsJOfuEo6RFr2GqC4w42vQBwULDVvhEIf8&t=2024-06-10T13%3A04%3A38.140Z",
+    "https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/banner06.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvYmFubmVyMDYucG5nIiwiaWF0IjoxNzE5MjI1NjM1LCJleHAiOjE3NTA3NjE2MzV9.DE0j1OWo1kRRM1Z6iPCj3XxvIHimKJusBP2okq76hd4&t=2024-06-24T10%3A40%3A35.759Z",
+    "https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/banner05.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvYmFubmVyMDUucG5nIiwiaWF0IjoxNzE5MjI1NDgzLCJleHAiOjE3NTA3NjE0ODN9.lAJN14Pq_SUMT4KLKk0ViGfLNxFfJZIgzl818zqbsew&t=2024-06-24T10%3A38%3A03.800Z",
     "https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/banner04.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvYmFubmVyMDQucG5nIiwiaWF0IjoxNzE4MDg3NTc2LCJleHAiOjE3NDk2MjM1NzZ9.vprjqiaD6wqLurxCdrlbVRgfUrNRAKZo_OPJglypmcY&t=2024-06-11T06%3A32%3A57.040Z",
   ];
 

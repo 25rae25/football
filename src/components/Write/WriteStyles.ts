@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
 
 export const WriteWrapper = styled.div`
   max-width: 1024px;
