@@ -15,3 +15,5 @@ export interface ICommon {
 export interface ITeamdata {
   teamData: ICommon;
 }
+
+// 모든 공통 타입을 넣어라

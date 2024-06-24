@@ -7,7 +7,8 @@ import Write from "@/components/Write/Write";
 
 export default function WriteContainer() {
   const router = useRouter();
-  const [files, setFiles] = useState();
+  // 이미지 관련
+  const [upload, setUpload] = useState<string>("");
   const fileRef = useRef<HTMLInputElement>(null);
 
   const [writeValue, setWriteValue] = useState({
@@ -17,7 +18,7 @@ export default function WriteContainer() {
     time: "",
     range: "",
     fee: 0,
-    imageUrl: "",
+    imageUrl: upload,
     phone: "",
     introduction: "",
     title: "",
@@ -30,6 +31,22 @@ export default function WriteContainer() {
     }));
   }, []);
 
+  // 이미지 파일 관련
+  const handleAddUpload = () => {
+    fileRef.current?.click();
+  };
+
+  const handleUpload = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files !== null) {
+      setUpload(URL.createObjectURL(e.target.files[0]));
+    }
+  };
+
+  const handleRemoveImage = () => {
+    setUpload("");
+  };
+
+  // api
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -44,15 +61,15 @@ export default function WriteContainer() {
     [writeValue, router]
   );
 
-  const handleClick = () => {
-    fileRef?.current?.click();
-  };
-
   return (
     <Write
       handleInput={handleInput}
       handleSubmit={handleSubmit}
-      handleClick={handleClick}
+      handleAddUpload={handleAddUpload}
+      handleUpload={handleUpload}
+      handleRemoveImage={handleRemoveImage}
+      upload={upload}
+      fileRef={fileRef}
     />
   );
 }

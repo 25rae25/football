@@ -1,16 +1,29 @@
 "use client";
 
-import { ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, ForwardedRef, MouseEventHandler } from "react";
 import * as S from "./WriteStyles";
 import TemaInput from "../TemaInput/TemaInput";
+import PreviewImg from "../PreviewImg/PreviewImg";
 
 type Props = {
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
-  handleClick: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleAddUpload: MouseEventHandler<HTMLButtonElement>;
+  handleUpload: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleRemoveImage: () => void;
+  upload: string;
+  fileRef: ForwardedRef<HTMLInputElement>;
 };
 
-export default function Write({ handleInput, handleSubmit }: Props) {
+export default function Write({
+  handleInput,
+  handleSubmit,
+  handleAddUpload,
+  handleUpload,
+  handleRemoveImage,
+  upload,
+  fileRef,
+}: Props) {
   return (
     <S.WriteWrapper>
       <S.WriteForm onSubmit={handleSubmit}>
@@ -78,19 +91,13 @@ export default function Write({ handleInput, handleSubmit }: Props) {
           placeholder="안녕하세요 FC서초 입니다"
           handleInput={handleInput}
         />
-        <S.ImageLabel htmlFor="inputFile">사진 등록하기</S.ImageLabel>
-        <S.ImageInput type="file" id="inputFile" />
-        <div>
-          <S.TeamImg
-            // src={imagePreview}
-            src=""
-            layout="responsive"
-            width={100}
-            height={100}
-            alt="팀사진"
-          />
-        </div>
-        {/* handleClick={handleClick} */}
+        <PreviewImg
+          handleAddUpload={handleAddUpload}
+          handleUpload={handleUpload}
+          handleRemoveImage={handleRemoveImage}
+          upload={upload}
+          fileRef={fileRef}
+        />
         <S.SubmitButton>작성하기</S.SubmitButton>
         {/* <S.EditButton>수정하기</S.EditButton> */}
       </S.WriteForm>
