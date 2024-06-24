@@ -7,7 +7,7 @@ import Write from "@/components/Write/Write";
 
 export default function WriteContainer() {
   const router = useRouter();
-  // 이미지 관련
+  // PreviewImg 관련 기능
   const [upload, setUpload] = useState<string>("");
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -31,7 +31,7 @@ export default function WriteContainer() {
     }));
   }, []);
 
-  // 이미지 파일 관련
+  // PreviewImg 관련 기능
   const handleAddUpload = () => {
     fileRef.current?.click();
   };
@@ -46,7 +46,7 @@ export default function WriteContainer() {
     setUpload("");
   };
 
-  // api
+  // api post
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();

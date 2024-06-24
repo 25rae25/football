@@ -1,4 +1,5 @@
 import { ChangeEvent, ForwardedRef, MouseEventHandler } from "react";
+import * as S from "./PreviewImgStyles";
 
 type Props = {
   handleAddUpload: MouseEventHandler<HTMLButtonElement>;
@@ -17,17 +18,19 @@ export default function PreviewImg({
 }: Props) {
   return (
     <div>
+      <S.ImageInput type="file" ref={fileRef} onChange={handleUpload} />
       <div>
-        <p>이미지 테스트</p>
-      </div>
-      <div>
-        <input type="file" ref={fileRef} onChange={handleUpload} />
-      </div>
-      <div>
-        <button onClick={handleAddUpload}>클릭 미!!</button>
-        {upload && (
-          <img src={upload} onClick={handleRemoveImage} alt="이미지 미리보기" />
-        )}
+        <S.PreviewButton onClick={handleAddUpload}>
+          {upload && (
+            <S.PreviewImg
+              width={100}
+              height={100}
+              src={upload}
+              onClick={handleRemoveImage}
+              alt="이미지 미리보기"
+            />
+          )}
+        </S.PreviewButton>
       </div>
     </div>
   );
