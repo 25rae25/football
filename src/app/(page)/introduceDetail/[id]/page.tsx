@@ -7,28 +7,15 @@ import { ITeam } from "@/container/IntroduceContainer/IntroTeamTypes";
 import IntroduceDetail from "@/components/Introduce/IntroduceDetail";
 
 type Props = {
-  params: { id: number };
+  params: { teamId: number };
 };
 
 export default function IntroduceDetailPage({ params }: Props) {
-  const [teams, setTeams] = useState<ITeam[]>();
-  const id = params.id;
-
-  useEffect(() => {
-    async function fetchTeam() {
-      try {
-        const response = await apis.getTeam(id);
-        setTeams(teams);
-      } catch (error) {
-        console.error("정보를 못 불러왔습니다", error);
-      }
-    }
-    fetchTeam();
-  }, [id, teams]);
+  const teamId = params.teamId;
 
   return (
     <>
-      <IntroduceDetailContainer id={id} />
+      <IntroduceDetailContainer teamId={teamId} />
     </>
   );
 }

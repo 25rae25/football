@@ -3,7 +3,7 @@
 import { Team } from "@/container/IntroduceContainer/IntroTeamTypes";
 import * as S from "./IntroduceDetailStyles";
 
-export default function IntroduceDetail({ id }: Team) {
+export default function IntroduceDetail() {
   return (
     <S.IntroduceDetailWrapper>
       <S.IntroduceDetailWrap>
