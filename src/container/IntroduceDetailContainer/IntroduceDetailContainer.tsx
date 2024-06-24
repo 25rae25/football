@@ -35,6 +35,5 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     fetchTeam();
   }, [teamId]);
 
-  console.log(teamData);
   return <IntroduceDetail teamData={teamData} />;
 }

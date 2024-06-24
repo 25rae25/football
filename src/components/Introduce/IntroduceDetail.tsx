@@ -1,6 +1,6 @@
 "use client";
 
-import { ICommon, ITeamdata } from "@/common/types/CommonTypes";
+import { ITeamdata } from "@/common/types/CommonTypes";
 import * as S from "./IntroduceDetailStyles";
 
 export default function IntroduceDetail({ teamData }: ITeamdata) {
