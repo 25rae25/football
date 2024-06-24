@@ -9,5 +9,9 @@ export interface ICommon {
   imageUrl: string;
   phone: string;
   introduction: string;
-  title: string;
+  title?: string;
+}
+
+export interface ITeamdata {
+  teamData: ICommon;
 }

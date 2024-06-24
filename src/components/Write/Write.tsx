@@ -97,3 +97,6 @@ export default function Write({ handleInput, handleSubmit }: Props) {
     </S.WriteWrapper>
   );
 }
+
+// input display none 다른거 클릭했을때 작동하게 해야하니까 useRef()기능 사용 onChange이벤트로 이미지가 바꼈다는걸 알려주고 바뀐걸 넣어주고(useState) 이미지 path
+// e.target.file로 넣고 이미지에 해당url input창 대신에 보여줘야함
