@@ -20,8 +20,14 @@ export default function MyPage() {
           <S.TeamIcon />
           <S.PageContent>팀정보</S.PageContent>
         </S.MyPage>
-        <MyCalendar />
+        <S.MyPage>
+          <S.MeailIcon />
+          <S.PageContent>이메일</S.PageContent>
+        </S.MyPage>
       </S.MyPageWrap>
+      <S.CalendarWrap>
+        <MyCalendar />
+      </S.CalendarWrap>
     </S.MyPageWrapper>
   );
 }
