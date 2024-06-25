@@ -18,7 +18,6 @@ export default function LoginContainer() {
       [e.target.name]: e.target.value,
     }));
   }, []);
-  console.log(loginValue);
 
   // api post 전송
   const handleSubmit = useCallback(
@@ -27,8 +26,7 @@ export default function LoginContainer() {
       try {
         const response = await apis.postLogin(loginValue);
         localStorage.setItem("accessToken", response?.data?.item?.accessToken);
-        console.log("resposnse", response.data.item);
-        // router.push("/");
+        router.push("/");
       } catch (error) {
         console.error("로그인을 실패했습니다.");
       }
