@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
+import Link from "next/link";
 import { FaRegUser } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
-
 import { CiSearch } from "react-icons/ci";
-import Link from "next/link";
+import { CiUser } from "react-icons/ci";
+import { IoIosLogOut } from "react-icons/io";
 
 export const NavbarWrapper = styled.div`
   width: 100%;
@@ -23,11 +24,14 @@ export const SearchWrapper = styled.div`
   display: flex;
 `;
 
-export const UserIcon = styled(FaUser)`
-  font-size: 30px;
+export const UserIcon = styled(CiUser)`
+  font-size: 38px;
   color: #282b33;
   height: 100%;
   padding: 5px;
+  :hover {
+    color: #1570ff;
+  }
 `;
 
 export const LoginIcon = styled(FaRegUser)`
@@ -35,6 +39,16 @@ export const LoginIcon = styled(FaRegUser)`
   color: #282b33;
   height: 100%;
   padding: 5px;
+`;
+
+export const LogoutIcon = styled(IoIosLogOut)`
+  font-size: 38px;
+  color: #282b33;
+  height: 100%;
+  padding: 5px;
+  :hover {
+    color: #ff4d37;
+  }
 `;
 
 export const SearchWrap = styled.div`
