@@ -11,6 +11,11 @@ export const postSignup = (data: {
   return axios.post(`${getApiUrl()}/auths/sign-up`, { ...data });
 };
 
+// 로그인
+export const postLogin = (data: { email: string; password: string }) => {
+  return axios.post(`${getApiUrl()}/auths/login/email`, { ...data });
+};
+
 // 팀홍보글 작성
 export const postWrite = (data: {
   name: string;

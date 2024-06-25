@@ -23,11 +23,11 @@ export default function Login() {
           />
         </S.LoginWrap>
         <S.LoginButton>로그인</S.LoginButton>
-        <S.FindForm>
-          <S.Nav href="/">아이디/비밀번호 찾기</S.Nav>
-          <S.Nav href="/signup">회원가입</S.Nav>
-        </S.FindForm>
       </S.LoginForm>
+      <S.FindForm>
+        <S.Nav href="/">아이디/비밀번호 찾기</S.Nav>
+        <S.Nav href="/signup">회원가입</S.Nav>
+      </S.FindForm>
     </S.LoginWrapper>
   );
 }
