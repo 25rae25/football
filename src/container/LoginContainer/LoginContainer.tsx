@@ -25,13 +25,20 @@ export default function LoginContainer() {
       e.preventDefault();
       try {
         const response = await apis.postLogin(loginValue);
-        localStorage.setItem("accessToken", response?.data?.item?.accessToken);
-        router.push("/");
+        if (typeof window !== "undefined") {
+          localStorage.setItem(
+            "accessToken",
+            response?.data?.item?.accessToken
+          );
+          router.push("/");
+        } else {
+          throw new Error("로그인을 실패했습니다");
+        }
       } catch (error) {
-        console.error("로그인을 실패했습니다.");
+        console.error("로그인을 실패했습니다.", error);
       }
     },
-    [loginValue]
+    [loginValue, router]
   );
 
   return <Login handleSubmit={handleSubmit} handleInput={handleInput} />;

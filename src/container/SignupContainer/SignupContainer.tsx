@@ -114,7 +114,7 @@ export default function SignupContainer() {
         console.error("가입을 실패했습니다.");
       }
     },
-    [inputValue]
+    [inputValue, router]
   );
 
   return (

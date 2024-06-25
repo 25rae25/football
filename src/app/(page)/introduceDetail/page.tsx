@@ -1,5 +1,10 @@
 import IntroduceDetailContainer from "@/container/IntroduceDetailContainer/IntroduceDetailContainer";
 
-export default function IntroduceDetailPage() {
-  return <IntroduceDetailContainer />;
+type Props = {
+  params: { id: number };
+};
+
+export default function IntroduceDetailPage({ params }: Props) {
+  const teamId = params.id;
+  return <IntroduceDetailContainer teamId={teamId} />;
 }

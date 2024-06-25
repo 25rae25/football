@@ -2,7 +2,6 @@
 
 import dayjs from "dayjs";
 import * as S from "./IntroduceStyles";
-import { QueryClient } from "@tanstack/react-query";
 import { ITeam } from "@/container/IntroduceContainer/IntroTeamTypes";
 
 interface TeamTypes {
@@ -10,7 +9,7 @@ interface TeamTypes {
 }
 
 export default function Introduce({ teams }: TeamTypes) {
-  const queryClient = new QueryClient();
+  // const queryClient = new QueryClient();
   // queryClient.prefetchInfiniteQuery({
   //   queryKey: [],
   //   queryFn: getPost
