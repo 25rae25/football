@@ -20,7 +20,6 @@ export default function IntroduceContainer() {
     }
     fetchTeams();
   }, []);
-  console.log("teams", teams);
 
   return <Introduce teams={teams} />;
 }

@@ -1,11 +1,16 @@
 "use client";
 
+import { FormEvent } from "react";
 import * as S from "./LoginStyles";
 
-export default function Login() {
+type Props = {
+  handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
+};
+
+export default function Login({ handleSubmit }: Props) {
   return (
     <S.LoginWrapper>
-      <S.LoginForm>
+      <S.LoginForm onSubmit={handleSubmit}>
         <S.LoginWrap>
           <S.LoginLabel>이메일</S.LoginLabel>
           <S.LoginInput

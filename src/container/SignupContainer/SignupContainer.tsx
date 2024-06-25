@@ -102,7 +102,7 @@ export default function SignupContainer() {
     }
   }, [inputValue.passwordConfirm]);
 
-  // backend 전송
+  // api post 전송
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();

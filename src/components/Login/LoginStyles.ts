@@ -7,7 +7,7 @@ export const LoginWrapper = styled.div`
   margin: 0 auto;
 `;
 
-export const LoginForm = styled.div`
+export const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
