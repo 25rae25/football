@@ -2,7 +2,12 @@
 
 import * as S from "./NavbarStyles";
 
-export default function Navbar() {
+type Props = {
+  token: string | null;
+  handleLogout: () => void;
+};
+
+export default function Navbar({ token, handleLogout }: Props) {
   return (
     <S.NavbarWrapper>
       <S.Navbar>
@@ -20,8 +25,7 @@ export default function Navbar() {
             />
           </S.SearchWrap>
           <S.Nav href="/login">
-            <S.UserIcon />
-            <S.LogginIcon />
+            {token ? <S.UserIcon onClick={handleLogout} /> : <S.LoginIcon />}
           </S.Nav>
         </S.SearchWrapper>
       </S.Navbar>

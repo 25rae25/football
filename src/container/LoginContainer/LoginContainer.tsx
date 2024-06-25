@@ -2,7 +2,7 @@
 
 import Login from "@/components/Login/Login";
 import * as apis from "@/apis";
-import { FormEvent, useCallback, useState } from "react";
+import { ChangeEvent, FormEvent, useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function LoginContainer() {
@@ -12,15 +12,23 @@ export default function LoginContainer() {
     password: "",
   });
 
+  const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setLoginValue((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }, []);
+  console.log(loginValue);
+
   // api post 전송
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       try {
         const response = await apis.postLogin(loginValue);
-        console.log("response", response);
-        // localStorage.setItem('accessToken', accessToken)
-        router.push("/");
+        localStorage.setItem("accessToken", response?.data?.item?.accessToken);
+        console.log("resposnse", response.data.item);
+        // router.push("/");
       } catch (error) {
         console.error("로그인을 실패했습니다.");
       }
@@ -28,5 +36,7 @@ export default function LoginContainer() {
     [loginValue]
   );
 
-  return <Login handleSubmit={handleSubmit} />;
+  return <Login handleSubmit={handleSubmit} handleInput={handleInput} />;
 }
+
+// redux ,react-query 연결해서 전역관리

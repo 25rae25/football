@@ -1,13 +1,14 @@
 "use client";
 
-import { FormEvent } from "react";
+import { ChangeEvent, FormEvent } from "react";
 import * as S from "./LoginStyles";
 
 type Props = {
   handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function Login({ handleSubmit }: Props) {
+export default function Login({ handleSubmit, handleInput }: Props) {
   return (
     <S.LoginWrapper>
       <S.LoginForm onSubmit={handleSubmit}>
@@ -15,8 +16,9 @@ export default function Login({ handleSubmit }: Props) {
           <S.LoginLabel>이메일</S.LoginLabel>
           <S.LoginInput
             type="text"
-            name="username"
+            name="email"
             placeholder="이메일 주소를 입력하세요."
+            onChange={handleInput}
           />
         </S.LoginWrap>
         <S.LoginWrap>
@@ -25,6 +27,7 @@ export default function Login({ handleSubmit }: Props) {
             type="password"
             name="password"
             placeholder="비밀번호를 입력하세요."
+            onChange={handleInput}
           />
         </S.LoginWrap>
         <S.LoginButton>로그인</S.LoginButton>

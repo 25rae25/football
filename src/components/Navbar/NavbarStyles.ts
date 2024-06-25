@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
-import { CiUser } from "react-icons/ci";
+import { FaRegUser } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
+
 import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 
@@ -22,15 +23,15 @@ export const SearchWrapper = styled.div`
   display: flex;
 `;
 
-export const UserIcon = styled(CiUser)`
-  font-size: 38px;
+export const UserIcon = styled(FaUser)`
+  font-size: 30px;
   color: #282b33;
   height: 100%;
   padding: 5px;
 `;
 
-export const LogginIcon = styled(FaUser)`
-  font-size: 38px;
+export const LoginIcon = styled(FaRegUser)`
+  font-size: 30px;
   color: #282b33;
   height: 100%;
   padding: 5px;
