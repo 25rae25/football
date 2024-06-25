@@ -31,8 +31,6 @@ export default function LoginContainer() {
             response?.data?.item?.accessToken
           );
           router.push("/");
-        } else {
-          throw new Error("로그인을 실패했습니다");
         }
       } catch (error) {
         console.error("로그인을 실패했습니다.", error);
