@@ -46,3 +46,8 @@ export const getTeam = (teamId: number) => {
 export const updateTeam = (teamId: number) => {
   return axios.put(`${getApiUrl()}/teams/${teamId}`);
 };
+
+// 팀정보 삭제하기(delete)
+export const deleteTeam = (teamId: number) => {
+  return axios.delete(`${getApiUrl()}/teams/${teamId}`);
+};
