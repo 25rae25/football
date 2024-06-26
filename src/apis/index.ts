@@ -41,3 +41,8 @@ export const getTeams = () => {
 export const getTeam = (teamId: number) => {
   return axios.get(`${getApiUrl()}/teams/${teamId}`);
 };
+
+// 팀정보 수정하기(put)
+export const updateTeam = (teamId: number) => {
+  return axios.put(`${getApiUrl()}/teams/${teamId}`);
+};
