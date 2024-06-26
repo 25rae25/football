@@ -32,7 +32,7 @@ export const postWrite = (data: {
   return axios.post(`${getApiUrl()}/teams`, { ...data });
 };
 
-// 팀소개글 불러오기
+// 팀 정보 불러오기(전체)
 export const getTeams = () => {
   return axios.get(`${getApiUrl()}/teams?page=1&size=12`);
 };
