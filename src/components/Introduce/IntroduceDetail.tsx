@@ -1,5 +1,3 @@
-"use client";
-
 import { ITeamdata } from "@/common/types/CommonTypes";
 import * as S from "./IntroduceDetailStyles";
 

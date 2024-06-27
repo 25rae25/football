@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import * as S from "./TemaInputStyles";
+import * as S from "./TeamInputStyles";
 
 type Props = {
   title: string;
@@ -10,7 +10,7 @@ type Props = {
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function TemaInput({
+export default function TeamInput({
   title,
   type,
   id,

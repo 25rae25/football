@@ -1,5 +1,3 @@
-"use client";
-
 import * as S from "./NavigateStyles";
 import { usePathname } from "next/navigation";
 

@@ -1,5 +1,3 @@
-"use client";
-
 import * as S from "./ExploreStyles";
 
 export default function Explore() {

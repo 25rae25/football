@@ -10,7 +10,6 @@ export default function WriteContainer() {
   // PreviewImg 관련 기능
   const [upload, setUpload] = useState<string>("");
   const fileRef = useRef<HTMLInputElement>(null);
-
   const [writeValue, setWriteValue] = useState({
     name: "",
     province: "",
@@ -53,13 +52,14 @@ export default function WriteContainer() {
       try {
         await apis.postWrite(writeValue);
         alert("게시글작성이 완료되었습니다.");
-        router.push("/");
+        router.push("/introduce");
       } catch (error) {
-        console.error("게시글 작성이 실패했습니다.", error);
+        console.error("게시글 작성이 실패했습니다.");
       }
     },
     [writeValue, router]
   );
+  console.log("writeValue", writeValue);
 
   return (
     <Write
