@@ -1,5 +1,3 @@
-"use client";
-
 import { ChangeEvent, FormEvent, ForwardedRef, MouseEventHandler } from "react";
 import * as S from "./WriteStyles";
 import TemaInput from "../TemaInput/TemaInput";

@@ -25,9 +25,6 @@ export default function MyPage() {
           <S.PageContent>이메일</S.PageContent>
         </S.MyPage>
       </S.MyPageWrap>
-      <S.CalendarWrap>
-        <MyCalendar />
-      </S.CalendarWrap>
     </S.MyPageWrapper>
   );
 }
