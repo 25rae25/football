@@ -1,14 +1,13 @@
-"use client";
-
 import dayjs from "dayjs";
 import * as S from "./IntroduceStyles";
 import { ITeam } from "@/container/IntroduceContainer/IntroTeamTypes";
 
 interface TeamTypes {
   teams: ITeam[];
+  token: string | null;
 }
 
-export default function Introduce({ teams }: TeamTypes) {
+export default function Introduce({ teams, token }: TeamTypes) {
   // const queryClient = new QueryClient();
   // queryClient.prefetchInfiniteQuery({
   //   queryKey: [],
@@ -20,7 +19,11 @@ export default function Introduce({ teams }: TeamTypes) {
     <S.IntroduceWrapper>
       <S.IntroduceWrap>
         <S.IntroduceTitle>팀소개</S.IntroduceTitle>
-        <S.IntroduceEnroll href="/write">팀소개글 작성</S.IntroduceEnroll>
+        {token ? (
+          <S.IntroduceEnroll href="/write">팀소개글 작성</S.IntroduceEnroll>
+        ) : (
+          <S.IntroduceEnroll href="/login">팀소개글 작성</S.IntroduceEnroll>
+        )}
       </S.IntroduceWrap>
       <S.TeamWrapper>
         {teams ? (
