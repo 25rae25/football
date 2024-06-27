@@ -22,19 +22,21 @@ export const MyPage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 20px;
 `;
 
 export const PageContent = styled.div`
-  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 19px;
 `;
 
 export const ProfileImg = styled(Image)`
   background-color: white;
   object-fit: cover;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   padding: 0.3rem;
 `;
 

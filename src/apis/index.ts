@@ -1,6 +1,27 @@
 import axios from "axios";
 
 const getApiUrl = () => process.env.NEXT_PUBLIC_BASE_URL;
+// 토큰값 저장
+export const getAuthToken = () => {
+  return localStorage.getItem("accessToken");
+};
+
+const api = axios.create({
+  baseURL: getApiUrl(),
+});
+
+api.interceptors.request.use(
+  (config) => {
+    const token = getAuthToken();
+    if (token) {
+      config.headers["Authorization"] = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 // 회원가입
 export const postSignup = (data: {
@@ -8,12 +29,12 @@ export const postSignup = (data: {
   password: string;
   name: string;
 }) => {
-  return axios.post(`${getApiUrl()}/auths/sign-up`, { ...data });
+  return api.post(`${getApiUrl()}/auths/sign-up`, { ...data });
 };
 
 // 로그인
 export const postLogin = (data: { email: string; password: string }) => {
-  return axios.post(`${getApiUrl()}/auths/login/email`, { ...data });
+  return api.post(`${getApiUrl()}/auths/login/email`, { ...data });
 };
 
 // 팀홍보글 작성
@@ -29,25 +50,25 @@ export const postWrite = (data: {
   introduction: string;
   title: string;
 }) => {
-  return axios.post(`${getApiUrl()}/teams`, { ...data });
+  return api.post(`${getApiUrl()}/teams`, { ...data });
 };
 
 // 팀 정보 불러오기(전체)
 export const getTeams = () => {
-  return axios.get(`${getApiUrl()}/teams?page=1&size=12`);
+  return api.get(`${getApiUrl()}/teams?page=1&size=12`);
 };
 
 // 팀 정보 불러오기(개별)
 export const getTeam = (teamId: number) => {
-  return axios.get(`${getApiUrl()}/teams/${teamId}`);
+  return api.get(`${getApiUrl()}/teams/${teamId}`);
 };
 
 // 팀정보 수정하기(put)
 export const updateTeam = (teamId: number) => {
-  return axios.put(`${getApiUrl()}/teams/${teamId}`);
+  return api.put(`${getApiUrl()}/teams/${teamId}`);
 };
 
 // 팀정보 삭제하기(delete)
 export const deleteTeam = (teamId: number) => {
-  return axios.delete(`${getApiUrl()}/teams/${teamId}`);
+  return api.delete(`${getApiUrl()}/teams/${teamId}`);
 };

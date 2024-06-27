@@ -1,5 +1,3 @@
-"use client";
-
 import { ChangeEvent, FormEvent } from "react";
 import * as S from "./LoginStyles";
 

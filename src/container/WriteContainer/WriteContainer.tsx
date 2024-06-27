@@ -55,7 +55,7 @@ export default function WriteContainer() {
         alert("게시글작성이 완료되었습니다.");
         router.push("/");
       } catch (error) {
-        console.log("게시글 작성이 실패했습니다.");
+        console.error("게시글 작성이 실패했습니다.", error);
       }
     },
     [writeValue, router]
