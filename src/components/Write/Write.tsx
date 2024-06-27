@@ -28,48 +28,48 @@ export default function Write({
         <TeamInput
           title="팀명"
           type="text"
-          id="teamName"
-          name="teamName"
+          id="name"
+          name="name"
           placeholder="FC 한국"
           handleInput={handleInput}
         />
         <TeamInput
           title="주요 활동지역"
           type="text"
-          id="ActivityArea"
-          name="ActivityArea"
+          id="province"
+          name="province"
           placeholder="서울특별시 동작구"
           handleInput={handleInput}
         />
         <TeamInput
           title="운동 장소"
           type="text"
-          id="exercisePlace"
-          name="exercisePlace"
+          id="address"
+          name="address"
           placeholder="서울교육대학교 운동장"
           handleInput={handleInput}
         />
         <TeamInput
           title="운동 시간"
           type="text"
-          id="exerciseTime"
-          name="exerciseTime"
+          id="time"
+          name="time"
           placeholder="매주 일요일 오후 1~3시"
           handleInput={handleInput}
         />
         <TeamInput
           title="주요 연령대"
           type="text"
-          id="ageRange"
-          name="ageRange"
+          id="range"
+          name="range"
           placeholder="20~30대"
           handleInput={handleInput}
         />
         <TeamInput
           title="회비"
           type="text"
-          id="dues"
-          name="dues"
+          id="fee"
+          name="fee"
           placeholder="20,000원"
           handleInput={handleInput}
         />

@@ -28,6 +28,7 @@ export default function WriteContainer() {
       ...prev,
       [e.target.name]: e.target.value,
     }));
+    console.log("setWriteValue", setWriteValue);
   }, []);
 
   // PreviewImg 관련 기능
