@@ -1,3 +1,4 @@
+import StartContent from "./StartContent";
 import * as S from "./StartStyles";
 
 export default function Start() {
@@ -14,6 +15,7 @@ export default function Start() {
           <S.StartTitle>SOCCERINFO 성공적으로 데뷔하기</S.StartTitle>
         </div>
       </S.StartWrap>
+      <StartContent />
     </S.StartWrapper>
   );
 }
