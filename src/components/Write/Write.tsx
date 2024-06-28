@@ -26,6 +26,14 @@ export default function Write({
     <S.WriteWrapper>
       <S.WriteForm onSubmit={handleSubmit}>
         <TeamInput
+          title="제목"
+          type="text"
+          id="title"
+          name="title"
+          placeholder="20대가 많은 팀"
+          handleInput={handleInput}
+        />
+        <TeamInput
           title="팀명"
           type="text"
           id="name"

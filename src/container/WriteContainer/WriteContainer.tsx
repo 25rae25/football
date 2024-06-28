@@ -11,6 +11,7 @@ export default function WriteContainer() {
   const [upload, setUpload] = useState<string>("");
   const fileRef = useRef<HTMLInputElement>(null);
   const [writeValue, setWriteValue] = useState({
+    title: "",
     name: "",
     province: "",
     address: "",
@@ -20,15 +21,15 @@ export default function WriteContainer() {
     imageUrl: upload,
     phone: "",
     introduction: "",
-    title: "",
   });
+
+  console.log("writeValue", writeValue);
 
   const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setWriteValue((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
-    console.log("setWriteValue", setWriteValue);
   }, []);
 
   // PreviewImg 관련 기능
@@ -60,7 +61,6 @@ export default function WriteContainer() {
     },
     [writeValue, router]
   );
-  console.log("writeValue", writeValue);
 
   return (
     <Write

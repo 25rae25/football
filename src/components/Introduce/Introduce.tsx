@@ -37,7 +37,7 @@ export default function Introduce({ teams, token }: TeamTypes) {
                   alt="팀사진"
                 />
                 <S.TeamTitle>{item?.name}</S.TeamTitle>
-                <S.TeamContent>{item?.introduction}</S.TeamContent>
+                <S.TeamContent>{item?.title}</S.TeamContent>
                 <S.TeamDate>
                   {dayjs(item?.createdAt).format("YYYY-MM-DD")}
                 </S.TeamDate>

@@ -13,8 +13,12 @@ export default function MyPage() {
             alt="이미지"
           />
           <S.PageContent>조영래</S.PageContent>
+          <S.PageContent>youngrae960124@gmail.com</S.PageContent>
         </S.MyPage>
       </S.MyPageWrap>
+      <S.CalendarWrap>
+        <MyCalendar />
+      </S.CalendarWrap>
     </S.MyPageWrapper>
   );
 }

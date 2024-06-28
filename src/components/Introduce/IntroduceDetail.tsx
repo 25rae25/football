@@ -9,7 +9,7 @@ export default function IntroduceDetail({ teamData }: ITeamdata) {
           src={teamData?.imageUrl}
           width={1024}
           height={100}
-          alt={`teamData.name${teamData?.name}`}
+          alt={`${teamData?.name}팀 단체사진`}
         />
         <S.IntroduceDetail>
           <S.IntroduceDetailTitle>팀명</S.IntroduceDetailTitle>
