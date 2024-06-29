@@ -15,6 +15,12 @@ export default function StartContent() {
         <br /> - 모든 파울은 사이드에서 킥인으로 진행
         <br /> - 프리킥, 페널티킥 없음
       </S.StartContentSub>
+      <S.StartContentSub>
+        <br /> - 사람을 향한 슬라이딩 태클 금지
+        <br /> - 골키퍼(골레이로)에게 백패스 가능
+        <br /> - 모든 파울은 사이드에서 킥인으로 진행
+        <br /> - 프리킥, 페널티킥 없음
+      </S.StartContentSub>
     </S.StartContent>
   );
 }
