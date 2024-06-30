@@ -6,9 +6,9 @@ export default function Navigate() {
   return (
     <S.NaviContainer>
       <S.NaviWrapper>
-        <S.NaviItem>
+        {/* <S.NaviItem>
           <S.Nav href="/">소셜 매치</S.Nav>
-        </S.NaviItem>
+        </S.NaviItem> */}
         <S.NaviItem>
           <S.NewWrap>
             <S.Nav
