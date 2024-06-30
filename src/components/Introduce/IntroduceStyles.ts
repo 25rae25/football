@@ -38,11 +38,12 @@ export const TeamWrapper = styled.ul`
   width: 100%;
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const TeamWrap = styled.li`
   width: 24%;
-  margin: 1%;
+  margin: 0.5%;
   /* padding: 0 20px; */
 `;
 
