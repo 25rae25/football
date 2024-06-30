@@ -49,6 +49,13 @@ export default function IntroduceDetail({ teamData }: ITeamdata) {
             {teamData.introduction}
           </S.IntroduceDetailContent>
         </S.IntroduceDetail>
+        {teamData.userId ? (
+          <S.EditButton>작성하기</S.EditButton>
+        ) : (
+          <S.Disable>{teamData.userId}</S.Disable>
+        )}
+        <S.Disable></S.Disable>
+        <div>{teamData.userId}</div>
       </S.IntroduceDetailWrap>
     </S.IntroduceDetailWrapper>
   );

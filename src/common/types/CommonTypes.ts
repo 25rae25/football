@@ -10,6 +10,7 @@ export interface ICommon {
   phone: string;
   introduction: string;
   title?: string;
+  userId?: number;
 }
 
 export interface ITeamdata {

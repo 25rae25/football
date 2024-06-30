@@ -21,7 +21,10 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     imageUrl: "",
     phone: "",
     introduction: "",
+    userId: 0,
   });
+
+  console.log("teamData", teamData);
 
   // 팀정보 불러오기
   useEffect(() => {
