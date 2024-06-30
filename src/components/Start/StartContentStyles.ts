@@ -8,7 +8,6 @@ export const StartContent = styled.div`
   font-size: 18px;
   color: #595e68;
   line-height: 26px;
-  border-bottom: 1px solid #ddd;
 `;
 
 export const StartContentSubTitle = styled.div`
@@ -19,5 +18,6 @@ export const StartContentSubTitle = styled.div`
 `;
 
 export const StartContentSub = styled.div`
-  padding: 10px 0;
+  padding: 10px 0 40px 0;
+  border-bottom: 1px solid #ddd;
 `;
