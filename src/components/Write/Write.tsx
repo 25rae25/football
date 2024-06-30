@@ -25,6 +25,7 @@ export default function Write({
   return (
     <S.WriteWrapper>
       <S.WriteForm onSubmit={handleSubmit}>
+        <S.UserIdInput id="useId" name="useId" />
         <TeamInput
           title="제목"
           type="text"
@@ -104,8 +105,12 @@ export default function Write({
           upload={upload}
           fileRef={fileRef}
         />
+        {/* {userId ? (
+          <S.SubmitButton>작성하기</S.SubmitButton>
+        ) : (
+          <S.SubmitButton>수정하기</S.SubmitButton>
+        )} */}
         <S.SubmitButton>작성하기</S.SubmitButton>
-        {/* <S.EditButton>수정하기</S.EditButton> */}
       </S.WriteForm>
     </S.WriteWrapper>
   );

@@ -39,6 +39,7 @@ export const postLogin = (data: { email: string; password: string }) => {
 
 // 팀홍보글 작성
 export const postWrite = (data: {
+  useid?: string;
   name: string;
   province: string;
   address: string;

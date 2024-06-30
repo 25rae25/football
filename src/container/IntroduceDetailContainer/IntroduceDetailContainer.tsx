@@ -23,6 +23,7 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     introduction: "",
   });
 
+  // 팀정보 불러오기
   useEffect(() => {
     async function fetchTeam() {
       try {

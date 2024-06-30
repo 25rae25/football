@@ -22,7 +22,6 @@ export default function WriteContainer() {
     phone: "",
     introduction: "",
   });
-
   console.log("writeValue", writeValue);
 
   const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
@@ -47,7 +46,7 @@ export default function WriteContainer() {
     setUpload("");
   };
 
-  // api post
+  // api post 게시글작성
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
