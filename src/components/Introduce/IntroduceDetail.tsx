@@ -1,10 +1,34 @@
 import { ITeamdata } from "@/common/types/CommonTypes";
 import * as S from "./IntroduceDetailStyles";
+import { FormEvent } from "react";
 
-export default function IntroduceDetail({ teamData }: ITeamdata) {
+type Props = {
+  handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  token: string | null;
+  teamData: {
+    teamId?: number;
+    name: string;
+    province: string;
+    address: string;
+    time: string;
+    range: string;
+    fee: number;
+    imageUrl: string;
+    phone: string;
+    introduction: string;
+    title?: string;
+    userId?: number;
+  };
+};
+
+export default function IntroduceDetail({
+  teamData,
+  token,
+  handleSubmit,
+}: Props) {
   return (
     <S.IntroduceDetailWrapper>
-      <S.IntroduceDetailWrap>
+      <S.IntroduceDetailWrap onSubmit={handleSubmit}>
         <S.TeamImage
           src={teamData?.imageUrl}
           width={1024}
@@ -13,7 +37,7 @@ export default function IntroduceDetail({ teamData }: ITeamdata) {
         />
         <S.IntroduceDetail>
           <S.IntroduceDetailTitle>팀명</S.IntroduceDetailTitle>
-          <S.IntroduceDetailContent>{teamData.name}</S.IntroduceDetailContent>
+          <S.IntroduceDetailInput type="text" defaultValue={teamData?.name} />
         </S.IntroduceDetail>
         <S.IntroduceDetail>
           <S.IntroduceDetailTitle>주요 활동지역</S.IntroduceDetailTitle>
@@ -49,13 +73,8 @@ export default function IntroduceDetail({ teamData }: ITeamdata) {
             {teamData.introduction}
           </S.IntroduceDetailContent>
         </S.IntroduceDetail>
-        {teamData.userId ? (
-          <S.EditButton>작성하기</S.EditButton>
-        ) : (
-          <S.Disable>{teamData.userId}</S.Disable>
-        )}
-        <S.Disable></S.Disable>
-        <div>{teamData.userId}</div>
+        {token && <S.EditButton>수정하기</S.EditButton>}
+        <div>{token}</div>
       </S.IntroduceDetailWrap>
     </S.IntroduceDetailWrapper>
   );

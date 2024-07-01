@@ -22,6 +22,7 @@ export default function WriteContainer() {
     phone: "",
     introduction: "",
   });
+
   console.log("writeValue", writeValue);
 
   const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {

@@ -7,7 +7,7 @@ export const IntroduceDetailWrapper = styled.div`
   margin-top: 40px;
 `;
 
-export const IntroduceDetailWrap = styled.div``;
+export const IntroduceDetailWrap = styled.form``;
 
 export const TeamImage = styled(Image)`
   width: fit-content;
@@ -32,6 +32,13 @@ export const IntroduceDetailContent = styled.div`
   color: #807b7b;
 `;
 
+export const IntroduceDetailInput = styled.input`
+  color: #807b7b;
+  border: none;
+  background-color: none;
+  font-size: 16px;
+`;
+
 export const EditButton = styled.button`
   background-color: #1570ff;
   color: #fff;
@@ -44,7 +51,7 @@ export const EditButton = styled.button`
   border: none;
   width: 40%;
   display: block;
-  margin: 40px auto 0 auto;
+  margin: 40px auto 30px auto;
   cursor: pointer;
 `;
 

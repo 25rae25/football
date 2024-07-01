@@ -65,8 +65,21 @@ export const getTeam = (teamId: number) => {
 };
 
 // 팀정보 수정하기(put)
-export const updateTeam = (teamId: number) => {
-  return api.put(`${getApiUrl()}/teams/${teamId}`);
+export const putTeam = (
+  teamId: number,
+  data: {
+    name: string;
+    province: string;
+    address: string;
+    time: string;
+    range: string;
+    fee: number;
+    imageUrl: string;
+    phone: string;
+    introduction: string;
+  }
+) => {
+  return api.put(`${getApiUrl()}/teams/${teamId}`, { ...data });
 };
 
 // 팀정보 삭제하기(delete)
