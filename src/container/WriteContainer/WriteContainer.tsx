@@ -88,7 +88,6 @@ export default function WriteContainer({ teamId }: Props) {
   return (
     <Write
       handleInput={handleInput}
-      handleSubmit={handleSubmit}
       handleAddUpload={handleAddUpload}
       handleUpload={handleUpload}
       handleRemoveImage={handleRemoveImage}

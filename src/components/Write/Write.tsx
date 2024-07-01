@@ -5,7 +5,6 @@ import PreviewImg from "../PreviewImg/PreviewImg";
 
 type Props = {
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
-  handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
   handleAddUpload: MouseEventHandler<HTMLButtonElement>;
   handleUpload: (e: ChangeEvent<HTMLInputElement>) => void;
   handleRemoveImage: () => void;
@@ -15,7 +14,6 @@ type Props = {
 
 export default function Write({
   handleInput,
-  handleSubmit,
   handleAddUpload,
   handleUpload,
   handleRemoveImage,
@@ -108,7 +106,7 @@ export default function Write({
         ) : (
           <S.SubmitButton>수정하기</S.SubmitButton>
         )} */}
-      <S.SubmitButton onClick={handleSubmit}>작성하기</S.SubmitButton>
+      <S.SubmitButton>작성하기</S.SubmitButton>
     </S.WriteWrapper>
   );
 }
