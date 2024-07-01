@@ -13,12 +13,12 @@ export const FindWrapper = styled.div`
   height: 160px;
 `;
 
-export const FindWrap = styled.div`
+export const FindWrap = styled.form`
   display: flex;
+  flex-direction: column;
 `;
 
 export const FindInput = styled.input`
-  flex: 1;
   padding: 0.5rem;
   border: 1px solid #d1d5db;
   border-radius: 0.375rem;
@@ -43,8 +43,9 @@ export const CloseButton = styled.button`
 `;
 
 export const SubmitButton = styled.button`
-  margin-top: 1rem;
+  margin: 20px auto 0 auto;
   padding: 0.5rem 1rem;
+  width: 50%;
   background-color: #3b82f6;
   color: white;
   border: none;

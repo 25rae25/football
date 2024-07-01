@@ -11,6 +11,7 @@ export default function LoginContainer() {
     email: "",
     password: "",
   });
+  const [showModal, setShowModal] = useState(false);
 
   const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setLoginValue((prev) => ({
@@ -18,6 +19,10 @@ export default function LoginContainer() {
       [e.target.name]: e.target.value,
     }));
   }, []);
+
+  // modal창
+  const handleOpenModal = () => setShowModal(!showModal);
+  // router push?
 
   // api post 전송
   const handleSubmit = useCallback(
@@ -39,7 +44,13 @@ export default function LoginContainer() {
     [loginValue, router]
   );
 
-  return <Login handleSubmit={handleSubmit} handleInput={handleInput} />;
+  return (
+    <Login
+      handleSubmit={handleSubmit}
+      handleInput={handleInput}
+      handleOpenModal={handleOpenModal}
+    />
+  );
 }
 
 // redux ,react-query 연결해서 전역관리
