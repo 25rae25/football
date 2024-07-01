@@ -31,7 +31,12 @@ export default function Login({ handleSubmit, handleInput }: Props) {
         <S.LoginButton>로그인</S.LoginButton>
       </S.LoginForm>
       <S.FindForm>
-        <S.Nav href="/">아이디/비밀번호 찾기</S.Nav>
+        {/* {
+          showModal && (
+            <S.NavButton>아이디 비밀번호 찾기</S.NavButton>
+          )
+        } */}
+        <S.NavButton>아이디 비밀번호 찾기</S.NavButton>
         <S.Nav href="/signup">회원가입</S.Nav>
       </S.FindForm>
     </S.LoginWrapper>

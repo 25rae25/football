@@ -77,3 +77,19 @@ export const Nav = styled(Link)`
     font-weight: bold;
   }
 `;
+
+export const NavButton = styled.button`
+  font-size: 14px;
+  font-weight: 500;
+  color: #727f88;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+    font-weight: bold;
+  }
+`;
