@@ -5,7 +5,11 @@ import * as apis from "@/apis";
 import { useRouter } from "next/navigation";
 import Write from "@/components/Write/Write";
 
-export default function WriteContainer() {
+type Props = {
+  teamId: number;
+};
+
+export default function WriteContainer({ teamId }: Props) {
   const router = useRouter();
   // PreviewImg 관련 기능
   const [upload, setUpload] = useState<string>("");
@@ -22,8 +26,6 @@ export default function WriteContainer() {
     phone: "",
     introduction: "",
   });
-
-  console.log("writeValue", writeValue);
 
   const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setWriteValue((prev) => ({
@@ -47,6 +49,15 @@ export default function WriteContainer() {
     setUpload("");
   };
 
+  // const handleUpload = (e: ChangeEvent<HTMLInputElement>) => {
+  //   const imageFormData = new FormData();
+  //   [].forEach.call(e.target.files, (item) => {
+  //     imageFormData.append("image", item);
+  //   });
+  //   setUpload([...upload, imageFormData]);
+  //   console.log("imageFormData ", imageFormData);
+  // };
+
   // api post 게시글작성
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
@@ -61,6 +72,18 @@ export default function WriteContainer() {
     },
     [writeValue, router]
   );
+
+  //팀정보 수정하기
+  const handleEditSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    try {
+      e.preventDefault();
+      await apis.putTeam(teamId, writeValue);
+      // router.push("/");
+      console.log("teamUpdate", writeValue);
+    } catch (error) {
+      console.error("정보를 찾을 수 없습니다", error);
+    }
+  };
 
   return (
     <Write

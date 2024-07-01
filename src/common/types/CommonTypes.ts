@@ -1,5 +1,6 @@
 export interface ICommon {
   teamId: number;
+  authorId: number;
   name: string;
   province: string;
   address: string;
@@ -15,7 +16,6 @@ export interface ICommon {
 
 export interface ITeamdata {
   teamData: ICommon;
-  token: string | null;
 }
 
 // 모든 공통 타입을 넣어라

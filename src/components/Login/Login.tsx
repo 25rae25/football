@@ -6,15 +6,16 @@ type Props = {
   handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
   // handleCloseModal: () => void;
-  handleOpenModal: () => void;
+  handleModal: () => void;
+  showModal: boolean;
 };
 
 export default function Login({
   handleSubmit,
   handleInput,
-  handleOpenModal,
-}: // handleCloseModal,
-Props) {
+  handleModal,
+  showModal,
+}: Props) {
   return (
     <S.LoginWrapper>
       <S.LoginForm onSubmit={handleSubmit}>
@@ -39,8 +40,8 @@ Props) {
         <S.LoginButton>로그인</S.LoginButton>
       </S.LoginForm>
       <S.FindForm>
-        <S.NavButton onClick={handleOpenModal}>아이디 비밀번호찾기</S.NavButton>
-        {/* {handleOpenModal() && <FindId>아이디 비밀번호 찾기</FindId>} */}
+        {showModal && <FindId handleModal={handleModal} />}
+        <S.NavButton onClick={handleModal}>아이디 비밀번호찾기</S.NavButton>
         <S.Nav href="/signup">회원가입</S.Nav>
       </S.FindForm>
     </S.LoginWrapper>

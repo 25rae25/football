@@ -21,8 +21,9 @@ export default function LoginContainer() {
   }, []);
 
   // modal창
-  const handleOpenModal = () => setShowModal(!showModal);
-  // router push?
+  const handleModal = useCallback(() => {
+    setShowModal((prev) => !prev);
+  }, []);
 
   // api post 전송
   const handleSubmit = useCallback(
@@ -49,7 +50,8 @@ export default function LoginContainer() {
     <Login
       handleSubmit={handleSubmit}
       handleInput={handleInput}
-      handleOpenModal={handleOpenModal}
+      handleModal={handleModal}
+      showModal={showModal}
     />
   );
 }

@@ -77,6 +77,7 @@ export const putTeam = (
     imageUrl: string;
     phone: string;
     introduction: string;
+    authorId?: number;
   }
 ) => {
   return api.put(`${getApiUrl()}/teams/${teamId}`, { ...data });
@@ -85,4 +86,9 @@ export const putTeam = (
 // 팀정보 삭제하기(delete)
 export const deleteTeam = (teamId: number) => {
   return api.delete(`${getApiUrl()}/teams/${teamId}`);
+};
+
+// 유저정보 가져오기
+export const getUser = () => {
+  return api.get(`${getApiUrl()}/users/me`);
 };
