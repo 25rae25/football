@@ -11,9 +11,14 @@ export default function FindIdContainer() {
     setShowModal((prev) => !prev);
   }, []);
 
-  const handleEmail = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const handleEmailSubmit = useCallback(() => {
+    setEmail("");
   }, []);
 
-  return <FindId handleCloseModal={handleCloseModal} />;
+  return (
+    <FindId
+      handleCloseModal={handleCloseModal}
+      handleEmailSubmit={handleEmailSubmit}
+    />
+  );
 }

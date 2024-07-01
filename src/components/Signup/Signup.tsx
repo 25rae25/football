@@ -1,5 +1,3 @@
-"use client";
-
 import { ChangeEvent, FormEvent } from "react";
 import Input from "../Input/Input";
 import * as S from "./SignupStyles";

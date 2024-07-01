@@ -1,6 +1,10 @@
 import * as S from "./ExploreStyles";
 
-export default function Explore() {
+type Props = {
+  token: string | null;
+};
+
+export default function Explore({ token }: Props) {
   return (
     <S.ExploreWrapper>
       <S.ExploreWrap>
@@ -11,10 +15,17 @@ export default function Explore() {
           </S.Nav>
         </S.ExploreItem>
         <S.ExploreItem>
-          <S.Nav href="/">
-            <S.UserPlusIcon />
-            <S.ExploreText>팀홍보</S.ExploreText>
-          </S.Nav>
+          {token ? (
+            <S.Nav href="/write">
+              <S.UserPlusIcon />
+              <S.ExploreText>팀홍보</S.ExploreText>
+            </S.Nav>
+          ) : (
+            <S.Nav href="/login">
+              <S.UserPlusIcon />
+              <S.ExploreText>팀홍보</S.ExploreText>
+            </S.Nav>
+          )}
         </S.ExploreItem>
         <S.ExploreItem>
           <S.Nav href="/">
