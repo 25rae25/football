@@ -18,4 +18,15 @@ export interface ITeamdata {
   teamData: ICommon;
 }
 
-// 모든 공통 타입을 넣어라
+export interface GCommon {
+  gameId: number;
+  stadium: string;
+  address: string;
+  people: string;
+  shoes: string;
+  time: string;
+}
+
+export interface Gamedata {
+  gameData: GCommon;
+}
