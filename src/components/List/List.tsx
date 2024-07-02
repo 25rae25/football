@@ -1,13 +1,12 @@
-"use client";
-
+import { Gamedata, GCommon } from "@/common/types/CommonTypes";
 import * as S from "./ListStyles";
 
-export default function List() {
+export default function List({ gameId }: GCommon) {
   return (
     <S.MainWrapper>
       <div>
         <div>
-          <S.MainLink href="/reserve">
+          <S.MainLink href={`/${gameId}`}>
             <S.MainWrap>
               <S.MainTime>16:00</S.MainTime>
               <S.MainInfo>

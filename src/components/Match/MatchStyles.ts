@@ -72,7 +72,14 @@ export const MatchPlace = styled.div`
   color: #282b33;
   font-size: 22px;
   font-weight: 400;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+`;
+
+export const MatchStadium = styled.div`
+  color: #282b33;
+  font-size: 19px;
+  font-weight: 400;
+  padding-bottom: 10px;
 `;
 
 export const SubmitBar = styled.div`

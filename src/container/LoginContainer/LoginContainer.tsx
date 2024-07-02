@@ -4,6 +4,7 @@ import Login from "@/components/Login/Login";
 import * as apis from "@/apis";
 import { ChangeEvent, FormEvent, useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
 
 export default function LoginContainer() {
   const router = useRouter();
@@ -12,6 +13,8 @@ export default function LoginContainer() {
     password: "",
   });
   const [showModal, setShowModal] = useState(false);
+
+  const dispatch = useDispatch();
 
   const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setLoginValue((prev) => ({
@@ -36,9 +39,9 @@ export default function LoginContainer() {
             "accessToken",
             response?.data?.item?.accessToken
           );
+          // dispatch(setUser(response.data.item.user));
         }
         router.push("/");
-        console.log("response", response);
       } catch (error) {
         console.error("로그인을 실패했습니다.", error);
       }

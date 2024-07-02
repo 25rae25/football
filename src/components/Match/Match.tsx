@@ -1,8 +1,7 @@
-"use client";
-
 import { Gamedata } from "@/common/types/CommonTypes";
 import MatchRule from "./MatchRule";
 import * as S from "./MatchStyles";
+import dayjs from "dayjs";
 
 export default function Match({ gameData }: Gamedata) {
   return (
@@ -16,20 +15,22 @@ export default function Match({ gameData }: Gamedata) {
           </S.MatchWrap>
           <S.MatchWrap>
             <S.UserIcon />
-            <S.IconTitle>{gameData.people}</S.IconTitle>
+            <S.IconTitle>{gameData?.people}</S.IconTitle>
           </S.MatchWrap>
           <S.MatchWrap>
             <S.ShoesIcon />
-            <S.IconTitle>{gameData.shoes}</S.IconTitle>
+            <S.IconTitle>{gameData?.shoes}</S.IconTitle>
           </S.MatchWrap>
         </S.MatchWrapper>
         <MatchRule />
       </S.MatchContainer>
       <S.SubmitWrapper>
         <S.SubmitWrap>
-          <S.MatchTime>{gameData.time}</S.MatchTime>
-          <S.MatchPlace>{gameData.address}</S.MatchPlace>
-          <div>{gameData.stadium}</div>
+          <S.MatchTime>
+            {dayjs(gameData?.time).format("YYYY-MM-DD HH:mm")}
+          </S.MatchTime>
+          <S.MatchPlace>{gameData?.address}</S.MatchPlace>
+          <S.MatchStadium>{gameData?.stadium}</S.MatchStadium>
           <S.SubmitBar>궁금중을 모두 해결하세요</S.SubmitBar>
           <S.SubmitButton>신청하기</S.SubmitButton>
         </S.SubmitWrap>

@@ -52,9 +52,8 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     async function fetchUser() {
       try {
         const response = await apis.getUser();
-        console.log("response", response);
-        const authorId = response.data?.item?.id;
-        console.log("authorId", authorId);
+        // const authorId = response.data?.item?.id;
+        // console.log("authorId", authorId);
       } catch (error) {
         console.error("유저 정보를 못가져왔습니다");
       }
