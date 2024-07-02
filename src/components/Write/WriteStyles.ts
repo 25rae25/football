@@ -20,11 +20,10 @@ export const SubmitButton = styled.button`
   border-radius: 12px;
   font-weight: 500;
   padding: 20px;
-  margin-top: 40px;
   border: none;
   width: 40%;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 30px auto 20px auto;
   cursor: pointer;
 `;
 

@@ -82,6 +82,7 @@ export const NavButton = styled.button`
   font-size: 14px;
   font-weight: 500;
   color: #727f88;
+  margin-top: 2px;
   text-align: center;
   text-decoration: none;
   border: none;

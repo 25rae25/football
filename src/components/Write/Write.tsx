@@ -94,13 +94,13 @@ export default function Write({
         placeholder="안녕하세요 FC서초 입니다"
         handleInput={handleInput}
       />
-      <PreviewImg
+      {/* <PreviewImg
         handleAddUpload={handleAddUpload}
         handleUpload={handleUpload}
         handleRemoveImage={handleRemoveImage}
         upload={upload}
         fileRef={fileRef}
-      />
+      /> */}
       {/* {userId ? (
           <S.SubmitButton>작성하기</S.SubmitButton>
         ) : (

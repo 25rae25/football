@@ -5,6 +5,7 @@ export default function IntroduceDetail({ teamData }: ITeamdata) {
   return (
     <S.IntroduceDetailWrapper>
       <S.IntroduceDetailWrap>
+        <div>{teamData?.authorId}</div>
         <S.TeamImage
           src={teamData?.imageUrl}
           width={1024}
@@ -49,6 +50,7 @@ export default function IntroduceDetail({ teamData }: ITeamdata) {
             {teamData.introduction}
           </S.IntroduceDetailContent>
         </S.IntroduceDetail>
+        {/* {teamData?.authorId && <S.EditButton>수정하기</S.EditButton>} */}
       </S.IntroduceDetailWrap>
     </S.IntroduceDetailWrapper>
   );

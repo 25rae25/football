@@ -39,7 +39,7 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     async function fetchTeam() {
       try {
         const response = await apis.getTeam(teamId);
-        setTeamData(response.data.item);
+        setTeamData(response.data?.item);
       } catch (error) {
         console.error("정보를 못 불러왔습니다", error);
       }
@@ -53,6 +53,8 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
       try {
         const response = await apis.getUser();
         console.log("response", response);
+        const authorId = response.data?.item?.id;
+        console.log("authorId", authorId);
       } catch (error) {
         console.error("유저 정보를 못가져왔습니다");
       }

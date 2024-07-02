@@ -23,6 +23,8 @@ api.interceptors.request.use(
   }
 );
 
+/////// 회원 및 팀
+
 // 회원가입
 export const postSignup = (data: {
   email: string;
@@ -91,4 +93,14 @@ export const deleteTeam = (teamId: number) => {
 // 유저정보 가져오기
 export const getUser = () => {
   return api.get(`${getApiUrl()}/users/me`);
+};
+
+// 게임 정보 가져오기
+export const getGames = () => {
+  return api.get(`${getApiUrl()}/games?page=1&size=1&month=5`);
+};
+
+// 게임 단건 정보 가져오기
+export const getGame = (gameId: number) => {
+  return api.get(`${getApiUrl()}/games/${gameId}`);
 };
