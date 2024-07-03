@@ -85,7 +85,7 @@ export const SearchIcon = styled(CiSearch)`
 export const Searchbar = styled.input`
   width: calc(100% - 60px);
   font-size: 14px;
-  padding: 0px;
+  padding: 6px;
   margin-left: 5px;
   border-radius: 6px;
   color: #3e5463;

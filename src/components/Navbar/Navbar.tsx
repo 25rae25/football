@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as S from "./NavbarStyles";
 
 type Props = {
@@ -27,7 +28,9 @@ export default function Navbar({ token, handleLogout }: Props) {
             <S.UserIcon />
             {token && (
               <>
-                <S.CalenderIcon />
+                <Link href="/mypage">
+                  <S.CalenderIcon />
+                </Link>
                 <S.LogoutIcon onClick={handleLogout} />
               </>
             )}
