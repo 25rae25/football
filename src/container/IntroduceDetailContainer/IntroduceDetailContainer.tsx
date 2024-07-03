@@ -9,14 +9,15 @@ import {
   useEffect,
   useState,
 } from "react";
-import { ICommon } from "@/common/types/CommonTypes";
 import { useRouter } from "next/navigation";
+import { ICommon } from "@/common/types/CommonTypes";
 
 type Props = {
   teamId: number;
 };
 
 export default function IntroduceDetailContainer({ teamId }: Props) {
+  const router = useRouter();
   const [isEdit, setIsEdit] = useState(false);
   const [teamData, setTeamData] = useState<ICommon>({
     authorId: 0,
@@ -30,11 +31,10 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     phone: "",
     introduction: "",
   });
-
   const [userToken, setUserToken] = useState<string | null>("");
   const [userId, setUserId] = useState(0);
 
-  // 토큰 저장
+  // 토큰
   useEffect(() => {
     if (typeof window !== "undefined") {
       setUserToken(localStorage.getItem("accessToken"));
@@ -83,11 +83,13 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
       e.preventDefault();
       try {
         await apis.putTeam(teamId, teamData);
+        alert("게시글수정이 완료되었습니다.");
+        router.push("/introduce");
       } catch (error) {
         console.error(error);
       }
     },
-    [teamData, teamId]
+    [teamData, teamId, router]
   );
 
   const hadleIsEdit = useCallback(() => {

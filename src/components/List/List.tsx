@@ -1,5 +1,6 @@
-import { Gamedata, GCommon } from "@/common/types/CommonTypes";
+import { GCommon } from "@/common/types/CommonTypes";
 import * as S from "./ListStyles";
+import dayjs from "dayjs";
 
 type GameTypes = {
   game: GCommon[];
@@ -13,7 +14,7 @@ export default function List({ game }: GameTypes) {
           <div key={item.id}>
             <S.MainLink href={`/reserve/${item?.id}`}>
               <S.MainWrap>
-                <S.MainTime>{item?.time}</S.MainTime>
+                <S.MainTime>{dayjs(item?.time).format("HH:mm")}</S.MainTime>
                 <S.MainInfo>
                   <div>{item?.stadium}</div>
                   <S.MainMatch>

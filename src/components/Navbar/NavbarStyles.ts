@@ -97,6 +97,6 @@ export const Nav = styled(Link)`
 `;
 
 export const Logo = styled.span`
-  font-weight: 700;
+  font-weight: bold;
   font-size: 20px;
 `;

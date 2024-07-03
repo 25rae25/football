@@ -22,7 +22,6 @@ export default function IntroduceDetail({
       ) : (
         <S.IntroduceDetailWrapper>
           <S.IntroduceDetailWrap>
-            <div>{teamData?.authorId}</div>
             <S.TeamImage
               src={teamData?.imageUrl}
               width={1024}
