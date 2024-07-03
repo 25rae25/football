@@ -2,7 +2,13 @@
 
 import * as apis from "@/apis";
 import IntroduceDetail from "@/components/Introduce/IntroduceDetail";
-import { FormEvent, useEffect, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import { ICommon } from "@/common/types/CommonTypes";
 import { useRouter } from "next/navigation";
 
@@ -11,9 +17,8 @@ type Props = {
 };
 
 export default function IntroduceDetailContainer({ teamId }: Props) {
-  const router = useRouter();
+  const [isEdit, setIsEdit] = useState(false);
   const [teamData, setTeamData] = useState<ICommon>({
-    teamId: 0,
     authorId: 0,
     name: "",
     province: "",
@@ -27,6 +32,7 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
   });
 
   const [userToken, setUserToken] = useState<string | null>("");
+  const [userId, setUserId] = useState(0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -34,9 +40,19 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     }
   }, []);
 
+  const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setTeamData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }, []);
+
   // 팀정보 불러오기
   useEffect(() => {
     async function fetchTeam() {
+      if (!teamId) {
+        return;
+      }
       try {
         const response = await apis.getTeam(teamId);
         setTeamData(response.data?.item);
@@ -52,8 +68,7 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     async function fetchUser() {
       try {
         const response = await apis.getUser();
-        // const authorId = response.data?.item?.id;
-        // console.log("authorId", authorId);
+        setUserId(response.data?.item?.id);
       } catch (error) {
         console.error("유저 정보를 못가져왔습니다");
       }
@@ -61,7 +76,32 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     fetchUser();
   }, []);
 
-  return <IntroduceDetail teamData={teamData} />;
+  const handleEditSubmit = useCallback(
+    async (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      try {
+        await apis.putTeam(teamId, teamData);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    [teamData, teamId]
+  );
+
+  const hadleIsEdit = useCallback(() => {
+    setIsEdit((prev) => !prev);
+  }, []);
+
+  return (
+    <IntroduceDetail
+      teamData={teamData}
+      userId={userId}
+      isEdit={isEdit}
+      handleInput={handleInput}
+      handleEditSubmit={handleEditSubmit}
+      hadleIsEdit={hadleIsEdit}
+    />
+  );
 }
 
 // 유저정보 id랑 authid 비교해서 수정하기 버튼나오게

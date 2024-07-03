@@ -8,7 +8,6 @@ import { ITeam } from "./IntroTeamTypes";
 export default function IntroduceContainer() {
   const [teams, setTeams] = useState<ITeam[]>([]);
   const [userToken, setUserToken] = useState<string | null>("");
-  console.log("teams", teams);
 
   useEffect(() => {
     async function fetchTeams() {

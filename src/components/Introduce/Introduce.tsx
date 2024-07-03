@@ -2,10 +2,10 @@ import dayjs from "dayjs";
 import * as S from "./IntroduceStyles";
 import { ITeam } from "@/container/IntroduceContainer/IntroTeamTypes";
 
-interface TeamTypes {
+type TeamTypes = {
   teams: ITeam[];
   token: string | null;
-}
+};
 
 export default function Introduce({ teams, token }: TeamTypes) {
   // const queryClient = new QueryClient();

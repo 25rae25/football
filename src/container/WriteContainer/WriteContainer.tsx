@@ -1,16 +1,20 @@
 "use client";
 
-import { ChangeEvent, FormEvent, useCallback, useRef, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import * as apis from "@/apis";
 import { useRouter } from "next/navigation";
 import Write from "@/components/Write/Write";
 
-type Props = {
-  teamId: number;
-};
-
-export default function WriteContainer({ teamId }: Props) {
+export default function WriteContainer() {
   const router = useRouter();
+
   // PreviewImg 관련 기능
   const [upload, setUpload] = useState<string>("");
   const fileRef = useRef<HTMLInputElement>(null);
@@ -38,17 +42,14 @@ export default function WriteContainer({ teamId }: Props) {
   const handleAddUpload = () => {
     fileRef.current?.click();
   };
-
   const handleUpload = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files !== null) {
       setUpload(URL.createObjectURL(e.target.files[0]));
     }
   };
-
   const handleRemoveImage = () => {
     setUpload("");
   };
-
   // const handleUpload = (e: ChangeEvent<HTMLInputElement>) => {
   //   const imageFormData = new FormData();
   //   [].forEach.call(e.target.files, (item) => {
@@ -73,26 +74,5 @@ export default function WriteContainer({ teamId }: Props) {
     [writeValue, router]
   );
 
-  //팀정보 수정하기
-  const handleEditSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    try {
-      e.preventDefault();
-      await apis.putTeam(teamId, writeValue);
-      // router.push("/");
-      console.log("teamUpdate", writeValue);
-    } catch (error) {
-      console.error("정보를 찾을 수 없습니다", error);
-    }
-  };
-
-  return (
-    <Write
-      handleInput={handleInput}
-      handleAddUpload={handleAddUpload}
-      handleUpload={handleUpload}
-      handleRemoveImage={handleRemoveImage}
-      upload={upload}
-      fileRef={fileRef}
-    />
-  );
+  return <Write handleInput={handleInput} handleSubmit={handleSubmit} />;
 }

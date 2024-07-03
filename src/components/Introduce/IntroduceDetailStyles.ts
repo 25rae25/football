@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
+import Link from "next/link";
 
 export const IntroduceDetailWrapper = styled.div`
   max-width: 1024px;

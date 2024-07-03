@@ -1,6 +1,8 @@
+import { ChangeEvent, FormEvent } from "react";
+
 export interface ICommon {
-  teamId: number;
-  authorId: number;
+  teamId?: number;
+  authorId?: number;
   name: string;
   province: string;
   address: string;
@@ -16,10 +18,15 @@ export interface ICommon {
 
 export interface ITeamdata {
   teamData: ICommon;
+  userId: number;
+  isEdit: boolean;
+  hadleIsEdit: () => void;
+  handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleEditSubmit: (e: FormEvent<HTMLFormElement>) => void;
 }
 
 export interface GCommon {
-  gameId: number;
+  id: number;
   stadium: string;
   address: string;
   people: string;

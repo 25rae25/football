@@ -7,6 +7,7 @@ type Props = {
   id: string;
   name: string;
   placeholder: string;
+  value: string | number | undefined;
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -16,6 +17,7 @@ export default function TeamInput({
   id,
   name,
   placeholder,
+  value,
   handleInput,
 }: Props) {
   return (
@@ -28,6 +30,7 @@ export default function TeamInput({
         required
         autoFocus
         placeholder={placeholder}
+        defaultValue={value}
         onChange={handleInput}
       />
     </S.Write>
