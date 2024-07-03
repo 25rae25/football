@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { FaRegUser } from "react-icons/fa6";
-import { FaUser } from "react-icons/fa";
+import { SlCalender } from "react-icons/sl";
 import { CiSearch } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
@@ -34,11 +34,21 @@ export const UserIcon = styled(CiUser)`
   }
 `;
 
-export const LoginIcon = styled(FaRegUser)`
-  font-size: 30px;
+// export const LoginIcon = styled(FaRegUser)`
+//   font-size: 30px;
+//   color: #282b33;
+//   height: 100%;
+//   padding: 5px;
+// `;
+
+export const CalenderIcon = styled(SlCalender)`
+  font-size: 34px;
   color: #282b33;
   height: 100%;
   padding: 5px;
+  :hover {
+    color: #ff4d37;
+  }
 `;
 
 export const LogoutIcon = styled(IoIosLogOut)`
