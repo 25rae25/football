@@ -25,7 +25,12 @@ export default function Navbar({ token, handleLogout }: Props) {
           <S.Nav href="/login">
             {/* {token ? <S.UserIcon onClick={handleLogout} /> : <S.LoginIcon />} */}
             <S.UserIcon />
-            {token && <S.LogoutIcon onClick={handleLogout} />}
+            {token && (
+              <>
+                <S.CalenderIcon />
+                <S.LogoutIcon onClick={handleLogout} />
+              </>
+            )}
           </S.Nav>
         </S.SearchWrapper>
       </S.Navbar>

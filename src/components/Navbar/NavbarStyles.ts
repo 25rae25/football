@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { FaRegUser } from "react-icons/fa6";
-import { SlCalender } from "react-icons/sl";
+import { CiCalendarDate } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
@@ -41,13 +41,13 @@ export const UserIcon = styled(CiUser)`
 //   padding: 5px;
 // `;
 
-export const CalenderIcon = styled(SlCalender)`
-  font-size: 34px;
+export const CalenderIcon = styled(CiCalendarDate)`
+  font-size: 38px;
   color: #282b33;
   height: 100%;
   padding: 5px;
   :hover {
-    color: #ff4d37;
+    color: #00cb7f;
   }
 `;
 
