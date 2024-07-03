@@ -1,7 +1,7 @@
 import { ITeamdata } from "@/common/types/CommonTypes";
 import * as S from "./IntroduceDetailStyles";
 import Write from "../Write/Write";
-// exclude, include
+
 export default function IntroduceDetail({
   teamData,
   userId,

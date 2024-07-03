@@ -1,7 +1,6 @@
 import { ChangeEvent, FormEvent, ForwardedRef, MouseEventHandler } from "react";
 import * as S from "./WriteStyles";
 import TeamInput from "../TeamInput/TeamInput";
-import PreviewImg from "../PreviewImg/PreviewImg";
 import { ICommon } from "@/common/types/CommonTypes";
 
 type Props = {

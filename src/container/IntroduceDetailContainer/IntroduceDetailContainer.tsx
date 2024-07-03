@@ -34,6 +34,7 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
   const [userToken, setUserToken] = useState<string | null>("");
   const [userId, setUserId] = useState(0);
 
+  // 토큰 저장
   useEffect(() => {
     if (typeof window !== "undefined") {
       setUserToken(localStorage.getItem("accessToken"));
@@ -76,6 +77,7 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     fetchUser();
   }, []);
 
+  // 팀 수정
   const handleEditSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -103,6 +105,3 @@ export default function IntroduceDetailContainer({ teamId }: Props) {
     />
   );
 }
-
-// 유저정보 id랑 authid 비교해서 수정하기 버튼나오게
-// teamData 값나오게하고 거기서 수정 하고 update 로넘기기
