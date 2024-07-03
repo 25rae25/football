@@ -28,8 +28,8 @@ export const CloseButton = styled.button`
   position: absolute;
   top: 0;
   right: 0;
-  width: 2rem;
-  height: 2rem;
+  width: 30px;
+  height: 30px;
   border: 0;
   font-size: 1.25rem;
   color: #3b82f6;

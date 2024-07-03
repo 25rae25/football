@@ -96,8 +96,9 @@ export const getUser = () => {
 };
 
 // 게임 정보 가져오기
+// month월에 맞게 조회
 export const getGames = () => {
-  return api.get(`${getApiUrl()}/games?page=1&size=1&month=5`);
+  return api.get(`${getApiUrl()}/games?page=1&size=10&month=7`);
 };
 
 // 게임 단건 정보 가져오기
