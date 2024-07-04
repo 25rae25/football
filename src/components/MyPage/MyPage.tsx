@@ -18,7 +18,9 @@ export default function MyPage() {
           <S.PageContent>youngrae960124@gmail.com</S.PageContent>
         </S.MyPage>
       </S.MyPageWrap>
-      <S.CalendarWrap></S.CalendarWrap>
+      <S.CalendarWrap>
+        <MyCalendar />
+      </S.CalendarWrap>
     </S.MyPageWrapper>
   );
 }
