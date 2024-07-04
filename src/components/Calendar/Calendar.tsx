@@ -13,7 +13,15 @@ export default function MyCalendar() {
 
   return (
     <>
-      <S.StyleCalendar locale="ko" onChange={onChange} value={value} />
+      <S.StyleCalendar
+        locale="ko"
+        onChange={onChange}
+        value={value}
+        calendarType="gregory"
+        view="month"
+        prev2Label={null}
+        next2Label={null}
+      />
     </>
   );
 }
