@@ -1,3 +1,5 @@
+"use client";
+
 import * as S from "./MyPageStyles";
 import MyCalendar from "../Calendar/Calendar";
 
@@ -16,9 +18,7 @@ export default function MyPage() {
           <S.PageContent>youngrae960124@gmail.com</S.PageContent>
         </S.MyPage>
       </S.MyPageWrap>
-      <S.CalendarWrap>
-        <MyCalendar />
-      </S.CalendarWrap>
+      <S.CalendarWrap></S.CalendarWrap>
     </S.MyPageWrapper>
   );
 }

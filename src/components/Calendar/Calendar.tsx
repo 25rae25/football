@@ -1,11 +1,12 @@
-"use client";
-
-import { useState } from "react";
 import "react-calendar/dist/Calendar.css";
 import * as S from "./CalendarStyles";
 
-export default function MyCalendar() {
-  const [value, onChange] = useState(new Date()); // 초기값은 현재 날짜
+type Props = {
+  onChnage: () => void;
+  value: string;
+};
+
+export default function MyCalendar({ value }: Props) {
   return (
     <>
       <S.StyleCalendar value={value} />
