@@ -25,7 +25,7 @@ export default function Reserve({ gameData }: Gamedata) {
     <S.ReserveWrapper>
       <S.ReserveWrap>
         <Slider {...settings}>
-          {banner.map((item, i) => (
+          {banner.map((item) => (
             <S.ReserveImage
               key={item}
               src={item}

@@ -1,7 +1,7 @@
 "use client";
 
 import * as apis from "@/apis";
-import { Gamedata, GCommon } from "@/common/types/CommonTypes";
+import { GCommon } from "@/common/types/CommonTypes";
 import List from "@/components/List/List";
 import { useEffect, useState } from "react";
 
@@ -14,7 +14,6 @@ export default function ListContainer() {
       try {
         const response = await apis.getGames();
         setGame(response?.data?.item?.games);
-        console.log("response ", response);
       } catch (error) {
         console.error("게임 정보를 못불러왔습니다");
       }

@@ -10,14 +10,7 @@ type Props = {
 };
 
 export default function ReserveContainer({ gameId }: Props) {
-  const [gameData, setGameData] = useState<GCommon>({
-    gameId: 0,
-    stadium: "",
-    address: "",
-    people: "",
-    shoes: "",
-    time: "",
-  });
+  const [gameData, setGameData] = useState<GCommon>();
 
   // 게임 정보 가져오기
   useEffect(() => {

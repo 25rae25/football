@@ -37,3 +37,9 @@ export interface GCommon {
 export interface Gamedata {
   gameData: GCommon;
 }
+
+export interface UCommon {
+  id?: number;
+  email: string;
+  name: string;
+}

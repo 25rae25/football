@@ -3,7 +3,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -27,3 +27,5 @@
 
 // "compilerOptions":
 //   "jsxImportSource": "@emotion/react" // Add this line.
+
+//  "strict": true -> 빡세게 null체크하는거

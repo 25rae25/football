@@ -1,9 +1,12 @@
-"use client";
-
 import * as S from "./MyPageStyles";
 import MyCalendar from "../Calendar/Calendar";
+import { UCommon } from "@/common/types/CommonTypes";
 
-export default function MyPage() {
+type UserTypes = {
+  user: UCommon;
+};
+
+export default function MyPage({ user }: UserTypes) {
   return (
     <S.MyPageWrapper>
       <S.MyPageWrap>
@@ -14,8 +17,8 @@ export default function MyPage() {
             height={100}
             alt="이미지"
           />
-          <S.PageContent>조영래</S.PageContent>
-          <S.PageContent>youngrae960124@gmail.com</S.PageContent>
+          <S.PageContent>{user?.name}</S.PageContent>
+          <S.PageContent>{user?.email}</S.PageContent>
         </S.MyPage>
       </S.MyPageWrap>
       <S.CalendarWrap>
