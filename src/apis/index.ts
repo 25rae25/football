@@ -105,3 +105,8 @@ export const getGames = () => {
 export const getGame = (gameId: number) => {
   return api.get(`${getApiUrl()}/games/${gameId}`);
 };
+
+// 게임 신청, 참가
+export const postJoinGame = (gameId: number) => {
+  return api.post(`${getApiUrl()}/games/${gameId}/join`);
+};

@@ -34,6 +34,14 @@ export default function MyCalendar() {
         prev2Label={null}
         next2Label={null}
       />
+      <Calendar
+        locale="ko"
+        formatDay={(locale, date) => moment(date).format("DD")}
+        prev2Label={null}
+        next2Label={null}
+        calendarType="gregory"
+        view="month"
+      />
     </>
   );
 }
