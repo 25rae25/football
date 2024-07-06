@@ -9,19 +9,26 @@ export const JoinWrapper = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  width: 600px;
-  height: 30%;
+  width: 40%;
+  height: 20%;
 `;
 // JoinWrap 반응형때 사이즈 줄여야함 @media
 
 export const JoinWrap = styled.div`
-  display: flex;
-  justify-content: space-between;
   margin-top: 20px;
 `;
 
+export const JoinTitle = styled.h3`
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 5px;
+`;
+
 export const SubmitButton = styled.button`
-  padding: 20px 100px;
+  width: 40%;
+  padding: 15px;
+  display: block;
+  margin: 10px auto 0 auto;
   border-radius: 7px;
   font-size: 17px;
   border: 0;
@@ -35,10 +42,16 @@ export const SubmitButton = styled.button`
 `;
 
 export const CloseButton = styled.button`
-  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
   border: 0;
+  font-size: 1.25rem;
   color: #3b82f6;
   background-color: #e8f7ff;
+  border-radius: 0.375rem;
   cursor: pointer;
   &:hover {
     color: white;
