@@ -101,4 +101,5 @@ export const SubmitButton = styled.button`
   padding: 12px;
   margin: 20px 0;
   width: 50%;
+  cursor: pointer;
 `;

@@ -30,5 +30,11 @@ export default function ReserveContainer({ gameId }: Props) {
     fetchGame();
   }, [gameId]);
 
-  return <Reserve gameData={gameData} handleModal={handleModal} />;
+  return (
+    <Reserve
+      gameData={gameData}
+      showModal={showModal}
+      handleModal={handleModal}
+    />
+  );
 }

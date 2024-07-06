@@ -7,11 +7,18 @@ import { useCallback, useEffect, useState } from "react";
 
 type Props = {
   gameId: number;
+  handleModal: () => void;
 };
 
-export default function JoinContainer({ gameId }) {
+export default function JoinContainer({ gameId }: Props) {
   const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
   const [userToken, setUserToken] = useState<string | null>("");
+
+  // 닫기
+  const handleModal = useCallback(() => {
+    setShowModal((prev) => !prev);
+  }, []);
 
   // token
   useEffect(() => {
@@ -36,5 +43,5 @@ export default function JoinContainer({ gameId }) {
     }
   }, [gameId]);
 
-  return <Join />;
+  return <Join handleModal={handleModal} />;
 }
