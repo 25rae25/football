@@ -4,7 +4,12 @@ import * as S from "./MatchStyles";
 import dayjs from "dayjs";
 import Join from "../Join/Join";
 
-export default function Match({ gameData, showModal, handleModal }: Gamedata) {
+export default function Match({
+  gameData,
+  showModal,
+  handleModal,
+  handleSubmit,
+}: Gamedata) {
   return (
     <S.Section>
       <S.MatchContainer>
@@ -33,7 +38,9 @@ export default function Match({ gameData, showModal, handleModal }: Gamedata) {
           <S.MatchPlace>{gameData?.address}</S.MatchPlace>
           <S.MatchStadium>{gameData?.stadium}</S.MatchStadium>
           <S.SubmitBar>궁금중을 모두 해결하세요</S.SubmitBar>
-          {showModal && <Join handleModal={handleModal} />}
+          {showModal && (
+            <Join handleModal={handleModal} handleSubmit={handleSubmit} />
+          )}
           <S.SubmitButton onClick={handleModal}>신청하기</S.SubmitButton>
         </S.SubmitWrap>
       </S.SubmitWrapper>

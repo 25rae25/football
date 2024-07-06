@@ -37,6 +37,7 @@ export interface GCommon {
 export interface Gamedata {
   gameData: GCommon;
   handleModal: () => void;
+  handleSubmit: () => void;
   showModal: boolean;
 }
 

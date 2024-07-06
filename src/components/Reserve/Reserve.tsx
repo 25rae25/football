@@ -9,6 +9,7 @@ export default function Reserve({
   gameData,
   showModal,
   handleModal,
+  handleSubmit,
 }: Gamedata) {
   const settings = {
     dots: false,
@@ -43,6 +44,7 @@ export default function Reserve({
           gameData={gameData}
           showModal={showModal}
           handleModal={handleModal}
+          handleSubmit={handleSubmit}
         />
       </S.ReserveWrap>
     </S.ReserveWrapper>
