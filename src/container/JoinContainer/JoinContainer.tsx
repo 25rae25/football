@@ -5,6 +5,10 @@ import Join from "@/components/Join/Join";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
+type Props = {
+  gameId: number;
+};
+
 export default function JoinContainer({ gameId }) {
   const router = useRouter();
   const [userToken, setUserToken] = useState<string | null>("");
@@ -30,7 +34,7 @@ export default function JoinContainer({ gameId }) {
     } catch (error) {
       console.error("경기 참여를 실패했습니다");
     }
-  }, []);
+  }, [gameId]);
 
   return <Join />;
 }

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Match from "../Match/Match";
 import { Gamedata } from "@/common/types/CommonTypes";
 
-export default function Reserve({ gameData }: Gamedata) {
+export default function Reserve({ gameData, handleModal }: Gamedata) {
   const settings = {
     dots: false,
     infinite: true,
@@ -35,7 +35,7 @@ export default function Reserve({ gameData }: Gamedata) {
             />
           ))}
         </Slider>
-        <Match gameData={gameData} />
+        <Match gameData={gameData} handleModal={handleModal} />
       </S.ReserveWrap>
     </S.ReserveWrapper>
   );

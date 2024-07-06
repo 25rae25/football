@@ -3,7 +3,7 @@
 import * as apis from "@/apis";
 import { GCommon } from "@/common/types/CommonTypes";
 import Reserve from "@/components/Reserve/Reserve";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 type Props = {
   gameId: number;
@@ -11,6 +11,11 @@ type Props = {
 
 export default function ReserveContainer({ gameId }: Props) {
   const [gameData, setGameData] = useState<GCommon>();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModal = useCallback(() => {
+    setShowModal((prev) => !prev);
+  }, []);
 
   // 게임 정보 가져오기
   useEffect(() => {
@@ -25,5 +30,5 @@ export default function ReserveContainer({ gameId }: Props) {
     fetchGame();
   }, [gameId]);
 
-  return <Reserve gameData={gameData} />;
+  return <Reserve gameData={gameData} handleModal={handleModal} />;
 }

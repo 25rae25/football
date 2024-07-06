@@ -3,7 +3,7 @@ import MatchRule from "./MatchRule";
 import * as S from "./MatchStyles";
 import dayjs from "dayjs";
 
-export default function Match({ gameData }: Gamedata) {
+export default function Match({ gameData, handleModal }: Gamedata) {
   return (
     <S.Section>
       <S.MatchContainer>
@@ -32,7 +32,7 @@ export default function Match({ gameData }: Gamedata) {
           <S.MatchPlace>{gameData?.address}</S.MatchPlace>
           <S.MatchStadium>{gameData?.stadium}</S.MatchStadium>
           <S.SubmitBar>궁금중을 모두 해결하세요</S.SubmitBar>
-          <S.SubmitButton>신청하기</S.SubmitButton>
+          <S.SubmitButton onClick={handleModal}>신청하기</S.SubmitButton>
         </S.SubmitWrap>
       </S.SubmitWrapper>
     </S.Section>
