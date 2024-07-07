@@ -45,15 +45,19 @@ export default function ReserveContainer({ gameId }: Props) {
   const handleSubmit = useCallback(async () => {
     try {
       const response = await apis.postJoinGame(gameId);
+      console.log("response", response);
       if (typeof window !== "undefined") {
         localStorage.setItem(
           "accessToken", //
           response?.data?.item?.accessToken
         );
       }
+      alert("게임 예약 신청을 완료했습니다.");
       router.push("/mypage");
     } catch (error) {
       console.error("경기 참여를 실패했습니다");
+      alert("게임 예약 신청을 실패했습니다.");
+      router.push("/login");
     }
   }, [gameId, router]);
 

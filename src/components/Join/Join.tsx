@@ -10,7 +10,7 @@ export default function Join({ handleModal, handleSubmit }: Props) {
     <S.JoinWrapper>
       <S.JoinWrap>
         <S.JoinTitle>게임 예약을 신청하시겠습니까?</S.JoinTitle>
-        <S.SubmitButton onSubmit={handleSubmit}>신청하기</S.SubmitButton>
+        <S.SubmitButton onClick={handleSubmit}>신청하기</S.SubmitButton>
         <S.CloseButton onClick={handleModal}>X</S.CloseButton>
       </S.JoinWrap>
     </S.JoinWrapper>
