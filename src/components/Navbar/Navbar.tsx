@@ -4,9 +4,10 @@ import * as S from "./NavbarStyles";
 type Props = {
   token: string | null;
   handleLogout: () => void;
+  handleChnage: (e) => void;
 };
 
-export default function Navbar({ token, handleLogout }: Props) {
+export default function Navbar({ token, handleLogout, handleChnage }: Props) {
   return (
     <S.NavbarWrapper>
       <S.Navbar>
@@ -15,12 +16,14 @@ export default function Navbar({ token, handleLogout }: Props) {
         </S.Nav>
         <S.SearchWrapper>
           <S.SearchWrap>
-            <S.SearchIcon />
+            <S.SearchIcon onClick={onSearch} />
             <S.Searchbar
               type="search"
               id="search"
               placeholder="지역, 팀 이름으로 찾기"
               maxLength={100}
+              onChange={handleChnage}
+              onKeyDown={handleKeyDown}
             />
           </S.SearchWrap>
           <S.Nav href="/login">

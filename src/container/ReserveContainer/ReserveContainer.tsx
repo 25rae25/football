@@ -57,7 +57,7 @@ export default function ReserveContainer({ gameId }: Props) {
     } catch (error) {
       console.error("경기 참여를 실패했습니다");
       alert("게임 예약 신청을 실패했습니다.");
-      router.push("/login");
+      // router.push("/login");
     }
   }, [gameId, router]);
 
