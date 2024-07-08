@@ -16,14 +16,15 @@ export default function Navbar({ token, handleLogout, handleChnage }: Props) {
         </S.Nav>
         <S.SearchWrapper>
           <S.SearchWrap>
-            <S.SearchIcon onClick={onSearch} />
+            <S.SearchIcon />
+            {/* onClick={onSearch}  */}
             <S.Searchbar
               type="search"
               id="search"
               placeholder="지역, 팀 이름으로 찾기"
               maxLength={100}
               onChange={handleChnage}
-              onKeyDown={handleKeyDown}
+              // onKeyDown={handleKeyDown}
             />
           </S.SearchWrap>
           <S.Nav href="/login">
