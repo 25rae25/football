@@ -32,9 +32,10 @@ export default function Navbar({ token, handleLogout, handleChnage }: Props) {
             <S.UserIcon />
             {token && (
               <>
-                <Link href="/mypage">
+                {/* link태그안에 a태그 또 있어서 생긴 에러 */}
+                {/* <Link href="/mypage">
                   <S.CalenderIcon />
-                </Link>
+                </Link> */}
                 <S.LogoutIcon onClick={handleLogout} />
               </>
             )}

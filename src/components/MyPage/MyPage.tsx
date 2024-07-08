@@ -1,5 +1,5 @@
 import * as S from "./MyPageStyles";
-import MyCalendar from "../Calendar/Calendar";
+// import MyCalendar from "../Calendar/Calendar";
 import { UCommon } from "@/common/types/CommonTypes";
 
 type UserTypes = {
@@ -21,9 +21,7 @@ export default function MyPage({ user }: UserTypes) {
           <S.PageContent>{user?.email}</S.PageContent>
         </S.MyPage>
       </S.MyPageWrap>
-      <S.CalendarWrap>
-        <MyCalendar />
-      </S.CalendarWrap>
+      <S.CalendarWrap>{/* <MyCalendar /> */}</S.CalendarWrap>
     </S.MyPageWrapper>
   );
 }
