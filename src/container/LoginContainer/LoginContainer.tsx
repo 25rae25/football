@@ -5,6 +5,7 @@ import * as apis from "@/apis";
 import { ChangeEvent, FormEvent, useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
+import { useStore } from "zustand";
 
 export default function LoginContainer() {
   const router = useRouter();
@@ -14,7 +15,14 @@ export default function LoginContainer() {
   });
   const [showModal, setShowModal] = useState(false);
 
-  // const dispatch = useDispatch();
+  // const {isLogined, setIsLogined} = useStore(state => state);
+
+  // const handleLogoutUser = () => {
+  //   setIsLogined(false);
+  //   localStorage.removeItem("key");
+  //   setmessage("로그아웃되었습니다.");
+  //   setalertColor("success");
+  // };
 
   const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setLoginValue((prev) => ({

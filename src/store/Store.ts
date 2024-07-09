@@ -1,8 +1,16 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
-export const store = configureStore({
-  reducer: {},
-});
+const useStore = create(
+  persist(
+    (set, get) => ({
+      isLogined: false,
+      setIsLogined: (value) => set({ isLogined: value }),
+    }),
+    {
+      name: "login state",
+    }
+  )
+);
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export default useStore;
