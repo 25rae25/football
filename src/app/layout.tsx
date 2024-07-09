@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import NavbarContainer from "@/container/NavbarContainer/NavbarContainer";
-import { StoreProvider } from "@/store/StoreProvider";
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -20,13 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <StoreProvider>
-      <html lang="ko">
-        <body className={sans.className}>
-          <NavbarContainer />
-          <main>{children}</main>
-        </body>
-      </html>
-    </StoreProvider>
+    <html lang="ko">
+      <body className={sans.className}>
+        <NavbarContainer />
+        <main>{children}</main>
+      </body>
+    </html>
   );
 }
