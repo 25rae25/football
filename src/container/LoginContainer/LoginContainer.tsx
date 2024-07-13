@@ -15,8 +15,8 @@ export default function LoginContainer() {
   });
   const [showModal, setShowModal] = useState(false);
 
+  // localstorage logout
   // const {isLogined, setIsLogined} = useStore(state => state);
-
   // const handleLogoutUser = () => {
   //   setIsLogined(false);
   //   localStorage.removeItem("key");
