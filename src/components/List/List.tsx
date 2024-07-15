@@ -18,8 +18,10 @@ export default function List({ game }: GameTypes) {
                 <S.MainInfo>
                   <div>{item?.stadium}</div>
                   <S.MainMatch>
-                    <S.MainOptions>6vs6</S.MainOptions>
-                    <S.MainOptions>3파전</S.MainOptions>
+                    <S.MainOptions>
+                      {item?.teamPlayer}vs{item?.teamPlayer}
+                    </S.MainOptions>
+                    <S.MainOptions>{item?.totalTeams}파전</S.MainOptions>
                   </S.MainMatch>
                 </S.MainInfo>
                 <S.MainStatusWrap>
