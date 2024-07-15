@@ -32,6 +32,8 @@ export interface GCommon {
   people: string;
   shoes: string;
   time: string;
+  teamPlayer?: number;
+  totalTeams?: number;
 }
 
 export interface Gamedata {
