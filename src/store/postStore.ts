@@ -9,6 +9,7 @@ type TPostStore = {
   addPost: (formData: TPost) => Promise<boolean>;
 };
 
+// zustand env파일 추가해서 저장
 const fetchData = async (url: string, options?: object) => {
   try {
     const res = await fetch(
