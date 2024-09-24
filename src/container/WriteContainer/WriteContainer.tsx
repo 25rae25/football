@@ -32,6 +32,7 @@ export default function WriteContainer() {
   }, []);
 
   // PreviewImg 관련 기능
+  // db 용량 넘 많다.
   const handleAddUpload = () => {
     fileRef.current?.click();
   };
