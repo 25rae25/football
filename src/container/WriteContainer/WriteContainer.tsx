@@ -44,6 +44,8 @@ export default function WriteContainer() {
   const handleRemoveImage = () => {
     setUpload("");
   };
+  // upload 구현
+
   // const handleUpload = (e: ChangeEvent<HTMLInputElement>) => {
   //   const imageFormData = new FormData();
   //   [].forEach.call(e.target.files, (item) => {
