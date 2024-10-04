@@ -9,6 +9,7 @@ type Props = {
   handleEditSubmit?: (e: FormEvent<HTMLFormElement>) => void;
   teamData?: ICommon;
   isEdit?: boolean;
+  // upload
   // handleAddUpload: MouseEventHandler<HTMLButtonElement>;
   // handleUpload: (e: ChangeEvent<HTMLInputElement>) => void;
   // handleRemoveImage: () => void;
