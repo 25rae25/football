@@ -22,6 +22,7 @@ export default function Carousel() {
     autoplay: true,
   };
 
+  // suparbase img
   const banner = [
     "https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/banner06.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvYmFubmVyMDYucG5nIiwiaWF0IjoxNzE5MjI1NjM1LCJleHAiOjE3NTA3NjE2MzV9.DE0j1OWo1kRRM1Z6iPCj3XxvIHimKJusBP2okq76hd4&t=2024-06-24T10%3A40%3A35.759Z",
     "https://gwmbluhqzjsorxlkmsij.supabase.co/storage/v1/object/sign/soccer/banner05.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NjZXIvYmFubmVyMDUucG5nIiwiaWF0IjoxNzE5MjI1NDgzLCJleHAiOjE3NTA3NjE0ODN9.lAJN14Pq_SUMT4KLKk0ViGfLNxFfJZIgzl818zqbsew&t=2024-06-24T10%3A38%3A03.800Z",
